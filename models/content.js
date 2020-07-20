@@ -2,6 +2,10 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const contentSchema = new mongoose.Schema({
+  topic: {
+    type: String,
+    required: true
+  },
   type: {
     type: String,
     required: true
@@ -43,7 +47,7 @@ const contentSchema = new mongoose.Schema({
       required:true,
       default:true
   },
-  attributes:{
+  tags:{
     type:[String],
     required: false
   },
@@ -65,6 +69,6 @@ const contentSchema = new mongoose.Schema({
 
 });
 
-const Recipe = mongoose.model("BBWContent", contentSchema);
+const Recipe = mongoose.model("Content", contentSchema);
 
-module.exports = BBWContent;
+module.exports = Content;
