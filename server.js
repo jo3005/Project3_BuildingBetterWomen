@@ -40,9 +40,7 @@ app.use(compression());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Static directory
-// =============================================================
-app.use(express.static("public"));
+
 
 // We need to use sessions to keep track of our user's login status
 // =============================================================
