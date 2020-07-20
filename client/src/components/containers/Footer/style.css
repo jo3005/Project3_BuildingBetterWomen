@@ -1,0 +1,32 @@
+footer {
+  background-color:#0E0400!important;
+  color:  #16676E;
+  min-height: 30px;
+  min-width:100%;
+}
+
+a {
+  color: lightseagreen;
+  font-weight: 400;   
+}
+
+a .navbar{
+  font-weight: 300;
+  position: relative;   
+}
+.fas,.fab {
+  font-size: 150%;
+  color:black;
+  margin-left: -10px;
+
+}
+
+.copywright_det {
+  line-height: normal;
+  vertical-align: middle;
+  font-size:75%;
+}
+i.far.fa-copyright {
+  font-size:75%;
+  
+}
