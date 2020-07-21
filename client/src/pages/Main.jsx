@@ -1,4 +1,5 @@
 import React from "react";
+import HeaderBlock from "../components/containers/HeaderBlock"
 import TagList from "../components/containers/TagList"
 import {Col,Row,Container} from "react-bootstrap"
 import "./style.css"
