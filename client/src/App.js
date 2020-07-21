@@ -15,11 +15,11 @@ import Wrapper from "./components/containers/Wrapper";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {Container} from "react-bootstrap"
 
-import Main from  "./pages/Main.jsx"
-import Details from  "./pages/Details.jsx"
-import Landing from  "./pages/Landing.jsx"
-import Login from  "./pages/Login.jsx"
-import Register from  "./pages/Register.jsx"
+import Main from  "./pages/Main.js"
+import Details from  "./pages/Details.js"
+import Landing from  "./pages/Landing.js"
+import Login from  "./pages/Login.js"
+import Register from  "./pages/Register.js"
 
 import "./App.css";
 
