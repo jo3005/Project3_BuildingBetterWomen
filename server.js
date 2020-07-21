@@ -8,7 +8,7 @@ const logger = require('morgan');
 
 // Requiring passport as we've configured it
 // =============================================================
-const passport = require("./config/passport");
+//const passport = require("./config/passport");
 
 // Include environmental variables
 // =============================================================
@@ -40,7 +40,7 @@ app.use(compression());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-
+/* 
 
 // We need to use sessions to keep track of our user's login status
 // =============================================================
@@ -48,7 +48,7 @@ app.use(
   session({ secret: "razor sharp", resave: true, saveUninitialized: true })
 );
 app.use(passport.initialize());
-app.use(passport.session());
+app.use(passport.session()); */
 
 // import utility functions
 // =============================================================
