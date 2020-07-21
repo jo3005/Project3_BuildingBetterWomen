@@ -58,11 +58,7 @@ app.use(passport.session()); */
 // Connect to the Mongo DB
 // =============================================================
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/bbwcontent");
-mongoose.connect(MONGODB_URI, {
-  useNewUrlParser: true,
-  useFindAndModify: false,
-  useUnifiedTopology: true 
-});
+
 
 // Requiring our models for syncing
 // =============================================================
