@@ -1,0 +1,7 @@
+.list-group, 
+.list-group-item, 
+.taglist{
+    padding:0.25rem;
+    margin: 0px;
+    font-size: 0.8rem;
+}

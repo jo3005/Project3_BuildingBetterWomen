@@ -1,7 +1,26 @@
-Button {
-    width: 100%;
-    min-height: 70px;
-    margin-top: 3px;
-    margin-bottom: 3px;
+.landingBtn {
+   
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: teal;
+    padding-top: 5%;
+    padding-bottom: 6%;
+    font-size: 1.5rem;
+    border-radius: 5px;
+  }
+
+  .landingBtn:hover{
+    background-color: darkblue;
+   
   }
   
+  .btn-group-vertical{
+    width: 80%;
+    align-items: flex-start;
+  }
+
+  .landingPage{
+    align-content: center;
+   
+  }

@@ -52,7 +52,7 @@ app.use(passport.session());
 
 // import utility functions
 // =============================================================
-require("../utils/API.js")(app);
+//require("../utils/API.js")(app);
 
 
 // Connect to the Mongo DB

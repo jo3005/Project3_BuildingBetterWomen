@@ -15,7 +15,7 @@ import Wrapper from "./components/containers/Wrapper";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {Container} from "react-bootstrap"
 
-import Content from  "./pages/Content.jsx"
+import Main from  "./pages/Main.jsx"
 import Details from  "./pages/Details.jsx"
 import Landing from  "./pages/Landing.jsx"
 import Login from  "./pages/Login.jsx"
@@ -27,42 +27,39 @@ function App() {
   return (
     <Router>
       <div  >
-        <Container  >
+        <Container fluid >
             <Switch>
               <Route path="/landing">
-                <NavbarHdg activePage="landing"/>
-                <Wrapper>
                   <Landing />
-                </Wrapper>
               </Route>
               <Route path="/money">
                 <NavbarHdg activePage="money"/>
                 <Wrapper>
-                  <Content whichSection="finances"  />
+                  <Main whichSection="finances"  />
                 </Wrapper>
               </Route>
               <Route path="/handywoman">
                 <NavbarHdg activePage="handywoman"/>
                 <Wrapper>
-                  <Content whichSection="practical"  />
+                  <Main whichSection="practical"  />
                 </Wrapper>
               </Route>
               <Route path="/legal">
                 <NavbarHdg activePage="legal"/>
                 <Wrapper>
-                  <Content whichSection="legal"  />
+                  <Main whichSection="legal"  />
                 </Wrapper>
               </Route>
               <Route path="/jobs">
                 <NavbarHdg activePage="jobs"/>
                 <Wrapper>
-                  <Content whichSection="jobs"/>
+                  <Main whichSection="jobs"/>
                 </Wrapper>
               </Route>
               <Route path="/mentalhealth">
                 <NavbarHdg activePage="mentalhealth"/>
                 <Wrapper>
-                <Content whichSection="mentalhealth"/>
+                <Main whichSection="mentalhealth"/>
                 </Wrapper>
               </Route>
               <Route path="/details">
@@ -84,10 +81,8 @@ function App() {
                 </Wrapper> 
               </Route>
               <Route path="/">
-                <NavbarHdg activePage="landing"/>
-                <Wrapper>
-                  <Landing/>
-                </Wrapper>  
+                <Landing/>
+                
               </Route>
             </Switch>
 
