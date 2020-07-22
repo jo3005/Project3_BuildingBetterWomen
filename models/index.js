@@ -1,6 +1,6 @@
 module.exports = {
-    Content: require("./Content"),
-    User: require("./User")
+    Content: require("./content"),
+    User: require("./user")
 
   };
   
