@@ -29,7 +29,12 @@ if (process.env.NODE_ENV === "production") {
 
 // Routes
 // =============================================================
-//require("./routes/api/contentRoutes")(app);
+require("./routes/api/contentRoutes")(app);
+
+
+// import utility functions
+// =============================================================
+require("../utils/API.js")(app);
 
 
 // Send every request to the React app
@@ -39,6 +44,7 @@ app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 app.use(logger("dev"));
+
 
 // Sets up the Express app to handle data parsing
 // =============================================================
@@ -56,9 +62,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session()); */
 
-// import utility functions
-// =============================================================
-//require("../utils/API.js")(app);
+
 
 
 // Connect to the Mongo DB

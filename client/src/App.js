@@ -28,17 +28,16 @@ import "./App.css";
 function App(props) {
   
   const whichPage=window.location.pathname.split('/')[1];
+  console.log(whichPage)
 
   return (
     <Router>
       <div  >
         <Container fluid>
 
-            <NavbarHdg activePage={whichPage}/>
+            {whichPage != "landing" && whichPage != "home" && <NavbarHdg activePage={whichPage}/>}
             <Switch>
-              <Route path="/landing"> 
-                  <Landing />
-              </Route>
+              <Route path="/landing"><Landing /></Route>
               <Route path="/money">
                 <Wrapper>
                   <Main whichSection="finances"  />
@@ -65,7 +64,6 @@ function App(props) {
                 </Wrapper>
               </Route>
               <Route path="/details">
-                <NavbarHdg activePage="details"/>
                 <Wrapper>
                   <Details />
                 </Wrapper>
