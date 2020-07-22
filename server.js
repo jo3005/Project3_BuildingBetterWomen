@@ -68,7 +68,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/bbwcontent");
 
 // Requiring our models for syncing
 // =============================================================
-//const db = require("./models");
+const db = require("./models");
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect,useState } from 'react';
 /* import logo from './logo.svg'; */
 
 import {
@@ -23,43 +23,45 @@ import Register from  "./pages/Register.js"
 
 import "./App.css";
 
-function App() {
+//require "./utils"
+
+function App(props) {
+  
+  const whichPage=window.location.pathname.split('/')[1];
+
   return (
     <Router>
       <div  >
-        <Container fluid  >
+        <Container fluid>
+
+            <NavbarHdg activePage={whichPage}/>
             <Switch>
-              <Route path="/landing">
+              <Route path="/landing"> 
                   <Landing />
               </Route>
               <Route path="/money">
-                <NavbarHdg activePage="money"/>
                 <Wrapper>
                   <Main whichSection="finances"  />
                 </Wrapper>
               </Route>
               <Route path="/handywoman">
-                <NavbarHdg activePage="handywoman"/>
                 <Wrapper>
                   <Main whichSection="practical"  />
                 </Wrapper>
               </Route>
               <Route path="/legal">
-                <NavbarHdg activePage="legal"/>
                 <Wrapper>
                   <Main whichSection="legal"  />
                 </Wrapper>
               </Route>
               <Route path="/jobs">
-                <NavbarHdg activePage="jobs"/>
                 <Wrapper>
                   <Main whichSection="jobs"/>
                 </Wrapper>
               </Route>
               <Route path="/mentalhealth">
-                <NavbarHdg activePage="mentalhealth"/>
                 <Wrapper>
-                <Main whichSection="mentalhealth"/>
+                  <Main whichSection="mentalhealth"/>
                 </Wrapper>
               </Route>
               <Route path="/details">
@@ -69,23 +71,19 @@ function App() {
                 </Wrapper>
               </Route>
               <Route path="/login">
-                <NavbarHdg activePage="login"/>
                 <Wrapper>
                   <Login />
                 </Wrapper>
               </Route>
               <Route path="/register">
-                <NavbarHdg activePage="register"/>
                 <Wrapper>
                   <Register />
                 </Wrapper> 
               </Route>
               <Route path="/">
                 <Landing/>
-                
               </Route>
             </Switch>
-
           <Footer />
         </Container>
       </div>
