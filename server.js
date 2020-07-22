@@ -29,7 +29,7 @@ if (process.env.NODE_ENV === "production") {
 
 // Routes
 // =============================================================
-require("./routes/api/contentRoutes")(app);
+//require("./routes/api/contentRoutes")(app);
 
 
 // Send every request to the React app
@@ -63,18 +63,12 @@ app.use(passport.session()); */
 
 // Connect to the Mongo DB
 // =============================================================
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/bbwcontent");
+//mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/bbwcontent");
 
 
 // Requiring our models for syncing
 // =============================================================
-const db = require("./models");
-
-
-
-
-
-
+//const db = require("./models");
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
