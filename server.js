@@ -26,6 +26,12 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
+
+// Routes
+// =============================================================
+require("./routes/api/contentRoutes")(app);
+
+
 // Send every request to the React app
 // Define any API routes before this runs
 // =============================================================
@@ -65,9 +71,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/bbwcontent");
 const db = require("./models");
 
 
-// Routes
-// =============================================================
-require("./routes/api")(app);
 
 
 

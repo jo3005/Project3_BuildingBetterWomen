@@ -15,7 +15,7 @@ const contentSchema = new mongoose.Schema({
     required: true
   },
   headingGraphic: {
-    type: Image,
+    type: Buffer,
     required: false
   },
   author:{
@@ -69,6 +69,6 @@ const contentSchema = new mongoose.Schema({
 
 });
 
-const Recipe = mongoose.model("Content", contentSchema);
+const Content = mongoose.model("Content", contentSchema);
 
 module.exports = Content;
