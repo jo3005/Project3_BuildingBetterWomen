@@ -41,7 +41,7 @@ module.exports = {
     },
 
   increaseLikes:function(req,res){
-    db.Content.findByIdAndUpdate(req.params._id,{likes=req.body.likes+1})
+    db.Content.findByIdAndUpdate(req.params._id,{likes:Number(req.body.likes)+1})
     .then(function(topic){
       res.json(topic)
      })
@@ -49,7 +49,7 @@ module.exports = {
   },
 
   increaseDislikes: function(req,res){
-    db.Content.findByIdAndUpdate(req.params._id,{dislikes=req.body.dislikes+1})
+    db.Content.findByIdAndUpdate(req.params._id,{dislikes:Number(req.body.dislikes)+1})
     .then(function(topic){
       res.json(topic)
      })
@@ -57,7 +57,7 @@ module.exports = {
   },
 
   hideItem: function(req,res){
-    db.Content.findByIdAndUpdate(req.params.id,{include=false})
+    db.Content.findByIdAndUpdate(req.params.id,{include:false})
     .then(function(topic){
       res.json(topic)
      })

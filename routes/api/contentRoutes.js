@@ -1,4 +1,4 @@
-const ctr= require("../controllers/contentController")
+const ctr= require("../../controllers/contentController")
 
 module.exports = function(app) {
 
