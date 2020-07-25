@@ -34,7 +34,7 @@ require("./routes/api/contentRoutes")(app);
 
 // import utility functions
 // =============================================================
-require("../utils/API.js")(app);
+//require("../utils/API.js")(app);
 
 
 // Send every request to the React app
