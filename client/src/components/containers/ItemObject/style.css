@@ -1,0 +1,66 @@
+.itemLogo{
+    max-height:75px;
+    width:auto;
+    padding-top: 10px;
+    
+}
+.headerLogo{
+   
+
+}
+
+.likedislikebtns.col-2{
+    
+    text-align: end;
+    
+}
+
+.noTopMargin{
+    margin-top:0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right:0px;
+    justify-content: space-between ;
+
+}
+
+.justify-content-left {
+    align-self: left;
+}
+.justify-content-right {
+    align-self: right;
+    margin-top:0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    margin-right:0px;
+    justify-content: flex-end;
+}
+.itemTag{
+    font-size: 0.7rem;
+    color: lightsteelblue;
+    border:none;
+
+}
+.list-group-horizontal {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+
+.card{
+    padding-top: 0px;
+    margin-top: 0px;
+}
+.card-img{
+    justify-self: left;
+}
+.card-body {
+    padding: 0.5rem;
+    margin-left: 0rem;
+
+}
+div {
+    padding: 0px;
+    margin: 0px;
+}

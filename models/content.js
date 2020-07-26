@@ -18,6 +18,10 @@ const contentSchema = new Schema({
     type: Buffer,
     required: false
   },
+  logoUrl:{
+    type:String,
+    required:false
+  },
   author:{
     type:String,
     required: false

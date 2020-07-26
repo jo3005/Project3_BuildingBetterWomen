@@ -1,7 +1,19 @@
-.list-group, 
+ 
 .list-group-item, 
 .taglist{
     padding:0.25rem;
     margin: 0px;
     font-size: 0.8rem;
 }
+.btn {
+    padding: 3px;
+    margin: 3px;
+    font-size: 0.7rem;
+
+}
+.list-group,.list-group.list-group-horizontal{
+    padding-left: 15px;
+    
+}
+
+

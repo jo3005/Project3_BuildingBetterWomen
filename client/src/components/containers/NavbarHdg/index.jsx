@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import {Nav,Navbar, Button,Col} from "react-bootstrap"
+import {Nav, Button,Col} from "react-bootstrap"
 
 // Depending on the current path, this component sets the "active" className on the appropriate navigation link item
 function NavbarHdg(props) {

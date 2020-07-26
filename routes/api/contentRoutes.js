@@ -3,7 +3,7 @@ const ctr= require("../../controllers/contentController")
 module.exports = function(app) {
 
   // Get all data for a particular topic that isn't marked as hidden
-    app.get("/api/:type", ctr.findAllTopicData);
+    app.get("/api", ctr.findAllTopicData);
      
     //show hidden content
     app.get("/api/unhide", ctr.showHiddenData);   

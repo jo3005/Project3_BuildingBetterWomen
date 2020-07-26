@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from 'react';
+import React from 'react';
 /* import logo from './logo.svg'; */
 
 import {
@@ -22,20 +22,25 @@ import Login from  "./pages/Login.js"
 import Register from  "./pages/Register.js"
 
 import "./App.css";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import {faThumbsUp,faThumbsDown} from '@fortawesome/free-solid-svg-icons';
 
-//require "./utils"
+
+import "./App.css";
+
+
+library.add(fab,faThumbsUp,faThumbsDown);
 
 function App(props) {
   
-  const whichPage=window.location.pathname.split('/')[1];
-  console.log(whichPage)
-
+  const whichPage=window.location.pathname.split('/')[1]; 
+  
   return (
     <Router>
       <div  >
         <Container fluid>
-
-            {whichPage != "landing" && whichPage != "home" && <NavbarHdg activePage={whichPage}/>}
+            {whichPage !== "landing" && whichPage !== "home" && whichPage !== "" && <NavbarHdg activePage={whichPage}/>}
             <Switch>
               <Route path="/landing"><Landing /></Route>
               <Route path="/money">

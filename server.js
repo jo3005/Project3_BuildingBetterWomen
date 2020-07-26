@@ -27,7 +27,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 //require models
-const db=require("./models")
+const db=require("./models/content")
 
 
 
@@ -38,18 +38,13 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/bbwcontent",
   {
     useNewUrlParser: true,
     useFindAndModify: false
-  });
+  }); 
 
 
-  db.Content
-  .remove({})
-    .then(data => {
-    process.exit(0);
-  })
-  .catch(err => {
-    console.error(err);
-    process.exit(1);
-  });
+
+
+
+
 
 
 

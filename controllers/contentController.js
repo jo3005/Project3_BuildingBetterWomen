@@ -4,10 +4,10 @@ const db = require("../models");
 
 module.exports = {
   findAllTopicData: function(req, res) {
-    const whichTopic = function() {
-      switch(req.params.type) {
-        case "money":
-          return "financial";
+    const whichTopic = function (input){
+      switch(input) {
+        case "money","finances":
+          return "money";
           break;
         case "handywoman":
           return "practical";
@@ -23,9 +23,10 @@ module.exports = {
           break;
         default:
           return "*"; 
-      }
+      
     }
-    db.Content.find({topic:whichTopic,include:true})
+  }
+    db.Content.find({topic:whichTopic(req.query.type),include:true})
     .then(function(topics) {
       res.json(topics);
     })
