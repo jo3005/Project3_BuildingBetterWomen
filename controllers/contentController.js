@@ -42,7 +42,7 @@ module.exports = {
     },
 
   increaseLikes:function(req,res){
-    db.Content.findByIdAndUpdate(req.params._id,{likes:Number(req.body.likes)+1})
+    db.Content.findByIdAndUpdate(req.params.id,{likes:Number(req.body.likes)+1})
     .then(function(topic){
       res.json(topic)
      })
@@ -50,7 +50,8 @@ module.exports = {
   },
 
   increaseDislikes: function(req,res){
-    db.Content.findByIdAndUpdate(req.params._id,{dislikes:Number(req.body.dislikes)+1})
+    console.log(req);
+    db.Content.findByIdAndUpdate(req.params.id,{dislikes:Number(req.body.dislikes)+1})
     .then(function(topic){
       res.json(topic)
      })

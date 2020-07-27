@@ -20,6 +20,7 @@ require("dotenv").config();
 const PORT = process.env.PORT || 8080;
 const app = express();
 
+
 // Serve up static assets (usually on heroku)
 // =============================================================
 if (process.env.NODE_ENV === "production") {
@@ -28,8 +29,6 @@ if (process.env.NODE_ENV === "production") {
 
 //require models
 const db=require("./models/content")
-
-
 
 
 // Connect to the Mongo DB
@@ -41,11 +40,11 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/bbwcontent",
   }); 
 
 
-
-
-
-
-
+  // Sets up the Express app to handle data parsing
+// =============================================================
+app.use(compression());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 
 // Routes
@@ -63,11 +62,6 @@ app.get("*", function(req, res) {
 app.use(logger("dev"));
 
 
-// Sets up the Express app to handle data parsing
-// =============================================================
-app.use(compression());
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
 
 /* 
 

@@ -12,16 +12,16 @@ export default function LikeDislikeBtns(props){
     return (
         
             <ButtonGroup >
-                <Button size="sm" variant="outline" onClick={props.onThumbsUpClick}>
-                    <FontAwesomeIcon icon={faThumbsUp} className="fontAwesomeIcons"></FontAwesomeIcon>
+                <Button size="sm" variant="outline" onClick={props.onThumbsUpClick} id={`lk_${data._id}`} value={data.likes}>
+                    <FontAwesomeIcon icon={faThumbsUp} className="fontAwesomeIcons" id={`fl_${data._id}`} value={data.likes}></FontAwesomeIcon>
                         {data.likes} 
                 </Button>
-                <Button size="sm" variant="outline" onClick={props.onThumbsDownClick}>
-                    <FontAwesomeIcon icon={faThumbsDown} className="fontAwesomeIcons"></FontAwesomeIcon>
+                <Button size="sm" variant="outline" onClick={props.onThumbsDownClick} id={`dl_${data._id}`} value={data.dislikes} >
+                    <FontAwesomeIcon icon={faThumbsDown} className="fontAwesomeIcons"onClick={props.onThumbsDownClick} id={`fd_${data._id}`} value={data.dislikes}></FontAwesomeIcon>
                         {data.dislikes} 
                 </Button>
             </ButtonGroup>
-             
+                
         
     )
 }

@@ -7,7 +7,7 @@ import "./style.css"
 export default function AllObjects(props){
     //console.log("AllObjectsProps:",props)
     return (
-        <ItemList data={props.data}/>
+        <ItemList {...props}/>
     )
 
 

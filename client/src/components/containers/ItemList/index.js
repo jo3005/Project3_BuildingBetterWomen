@@ -10,7 +10,12 @@ export default function ItemList(props){
         <ListGroup >
             {props.data.length > 0 &&
                 props.data.map((data)=>{
-                    return (<ItemObject key={data._id} data={data} fns={props.fns}/>)
+                    return (<ItemObject 
+                                key={data._id} 
+                                data={data} 
+                                onThumbsUpClick={props.onThumbsUpClick} 
+                                onThumbsDownClick={props.onThumbsDownClick} 
+                            />)
                 })}
         </ListGroup>
     )

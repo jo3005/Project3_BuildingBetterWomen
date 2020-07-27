@@ -1,5 +1,5 @@
 footer {
-  background-color: rgb(202, 3, 202);
+  background-color: rgb(160, 2, 160);
   color:  navy;
   min-height: 50px;
   min-width:100%;
@@ -15,7 +15,7 @@ a .navbar{
   position: relative;   
 }
 .fas,.fab {
-  font-size: 150%;
+  font-size: 1.5rem;
   color:black;
   margin-left: 0px;
 
@@ -24,9 +24,9 @@ a .navbar{
 .copywright_det {
   line-height: normal;
   vertical-align: middle;
-  font-size:75%;
+  font-size:0.75rem;
 }
 i.far.fa-copyright {
-  font-size:75%;
+  font-size:0.75rem;
   
 }

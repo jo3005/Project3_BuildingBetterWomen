@@ -3,14 +3,16 @@
 }
 
 .navbar, .navbar-dark {
-    background-color: rgb(202, 3, 202);
+    background-color: rgb(160, 2, 160);
     color:white;
+    min-width:100%;
 }
 
 h1.navbar-bbw {
     color:white;
     font-family: 'Love Ya Like A Sister', cursive;
     font-size: 2rem;
+    font-weight:normal;
 }
 a.nav-link>p {
     font-size: 1rem;

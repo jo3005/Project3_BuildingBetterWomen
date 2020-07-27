@@ -10,7 +10,7 @@ export default function HeaderBlock ({whichSection}){
         case 'finances':
             hdrtext='Managing Your Finances';
             break;
-        case 'handywoman':
+        case 'practical':
             hdrtext='Practical Skills';
             break;
         case 'legal':

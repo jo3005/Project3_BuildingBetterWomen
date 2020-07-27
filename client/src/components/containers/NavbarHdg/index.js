@@ -8,13 +8,12 @@ function NavbarHdg(props) {
   return (
     
     <Navbar collapseOnSelect="true" 
-            expand="md"  
+            expand="lg"  
             className="navbar-bbw" 
             defaultActiveKey={whichPage} 
             as="ul" 
             justify="right" 
             sticky="top"
-            defaultExpanded="false"
             variant="dark">
 
       <Navbar.Brand> <h1 className="navbar-bbw" >Building Better Women</h1></Navbar.Brand>
@@ -40,9 +39,7 @@ function NavbarHdg(props) {
             <Nav.Item as="li">
               <Nav.Link href="/mentalhealth"><p>Mental Health</p></Nav.Link>
             </Nav.Item>
-            <Nav.Item as="li">
-              <Nav.Link href="/contacts"><p>Contact Us</p></Nav.Link>
-            </Nav.Item>
+            
         </Nav>
         
           

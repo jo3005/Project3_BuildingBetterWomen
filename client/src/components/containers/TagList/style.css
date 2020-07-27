@@ -14,20 +14,18 @@
 }
 .list-group,.list-group.list-group-horizontal{
     padding-left: 15px;
+    padding-right: 15px;
     
 }
 
 .dropdown-toggle {
-    width:100%;
-    
+    width:100%;   
 }
 
 ul.dropdown {
     padding: 5px;
     padding-top: 0px;
-    width:100%;
-    
-    
+    width:100%;    
 }
 .taglist.container {
     margin-top: 0px;

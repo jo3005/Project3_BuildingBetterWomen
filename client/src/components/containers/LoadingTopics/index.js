@@ -12,11 +12,11 @@ export default function LoadingTopics() {
   return (
  
     <ButtonGroup vertical justified >
-        <Button title="Money" id="moneybtn" className= "landingBtn"   href="/money" block imageSrc={moneypic}> Money Matters</Button>
+        <Button title="Money" id="moneybtn" className= "landingBtn"   href="/money" style={{backgroundImage: moneypic}} block > Money Matters</Button>
         <Button title="Handywoman" id="handybtn" className= "landingBtn"   href="/handywoman" block>Be a Handywoman</Button>
         <Button title="Legal" id="legalbtn" className= "landingBtn"  href="/legal" block>Legal Stuff</Button>
         <Button title="Job Hunting" id="jobbtn" className= "landingBtn" href="/jobs" block>Job Hunting skills</Button>
-        <Button title="Mental Health" id="mentalbtn" className= "landingBtn"  href="/mentalhealth"block>Mental Health</Button>
+        <Button title="Mental Health" id="mentalbtn" className= "landingBtn"  href="/mentalhealth" block>Mental Health</Button>
     </ButtonGroup>
 
   );

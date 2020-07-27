@@ -4,13 +4,9 @@
     padding-top: 10px;
     
 }
-.headerLogo{
-   
-
-}
+.headerLogo{}
 
 .likedislikebtns.col-2{
-    
     text-align: end;
     
 }
@@ -29,6 +25,7 @@
 .justify-content-left {
     align-self: left;
 }
+
 .justify-content-right {
     align-self: right;
     margin-top:0px;
@@ -48,16 +45,26 @@
     margin-left: 0px;
     padding-left: 0px;
 }
+.itemTitle{
+
+}
+.itemSubtitle{}
+
+.itemContentText{}
+
+.itemUrl{}
+
+.itemLink{}
 
 .itemType{
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: grey;
     word-wrap: normal;
     font-family: 'Love Ya Like A Sister', cursive;
 }
 .card{
-    padding-top: 0px;
-    margin-top: 0px;
+    padding: 0px;
+    margin: 0px;
 }
 .card-img{
     justify-self: left;
@@ -65,9 +72,4 @@
 .card-body {
     padding: 0.5rem;
     margin-left: 0rem;
-
-}
-div {
-    padding: 0px;
-    margin: 0px;
 }

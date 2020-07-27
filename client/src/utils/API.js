@@ -8,16 +8,21 @@ export default  {
                 type:topic
             }})
     },
-    getHiddenData: async function(){
+    getOneTopicData: function(whichId){
+        console.log("getting data for topic:", whichId);
+        return axios.get(`/api/${whichId}`);
+    },
+    getHiddenData: function(){
         return axios.get('/api/hidden')
     },
-    increaseLikes:async  function(whichId,currentLikes){
-        return axios.put('/api/likes',{params:{id:whichId,likes:currentLikes}})
+    increaseLikes: function(whichId,currentLikes){
+        return axios.put(`/api/likes/${whichId}`,{likes:currentLikes})
     },
-    increaseDislikes:async  function(whichId,currentDislikes){
-        return axios.put('/api/dislikes',{params:{id:whichId,dislikes:currentDislikes}})
+    increaseDislikes:function(whichId,currentDislikes){
+        
+        return axios.put(`/api/dislikes/${whichId}`,{dislikes:currentDislikes})
     },
-    deleteItem:async  function(whichId){
-        return axios.put('/api/likes',{params:{id:whichId}})
+    deleteItem:function(whichId){
+        return axios.post('/api/likes',{params:{_id:whichId}})
     }
 };

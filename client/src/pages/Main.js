@@ -97,7 +97,7 @@ export default function Main ({whichSection}) {
         runTagFilter();
         runTypeFilter();
         
-    },[tags,types]);
+    },[tags,types,allPageObjects]);
 
     function runTagFilter(){
         let data=[...allPageObjects];    
@@ -170,12 +170,55 @@ export default function Main ({whichSection}) {
         return index;
     }
 
-    function onThumbsUpClick () {
-        console.log("clicked thumbs up")
-        };
-    function onThumbsDownClick () {
-        console.log("clicked thumbs up")
-        };
+    function updateOneInPageObjects(newObj){
+        
+        let currentPageObjects=[...pageObjects];
+        const foundIndex=currentPageObjects.findIndex((objct)=>{
+            return objct._id===newObj._id
+        })
+        if(foundIndex>0){
+            currentPageObjects[foundIndex]= newObj;
+            setPageObjects(currentPageObjects); 
+            console.log(currentPageObjects);   
+        }
+    };
+
+    function updateOneInAllPageObjects(newObj){
+        
+        let currentAllPageObjects=[...allPageObjects];
+        const foundIndex=currentAllPageObjects.findIndex((objct)=>{
+            return objct._id===newObj._id
+        })
+        if(foundIndex>0){
+            currentAllPageObjects[foundIndex]= newObj;
+            setAllPageObjects(currentAllPageObjects); 
+            console.log(currentAllPageObjects);
+        }
+    };
+
+    function onThumbsUpClick (e) {
+        e.preventDefault();
+        const record_id=e.target.id.slice(3);
+        const current_val=e.target.value;
+        API.increaseLikes(record_id,current_val)
+            .then((res)=>{
+                //console.log("response",res.data)
+                updateOneInPageObjects(res.data);
+                updateOneInAllPageObjects(res.data);
+                
+            });
+    };
+    
+    function onThumbsDownClick (e) {
+        e.preventDefault();
+        const record_id=e.target.id.slice(3);
+        const current_val=e.target.value;
+        API.increaseDislikes(record_id,current_val)
+            .then((res)=>{
+                updateOneInPageObjects(res.data);
+                updateOneInAllPageObjects(res.data);
+            })
+    };
     
     function handleCheckAll() {
         console.log("handleCheckAll")
@@ -184,7 +227,7 @@ export default function Main ({whichSection}) {
                     isChecked:true})
             });
         setTags(newtags);
-        console.log(tags);
+        //console.log(tags);
     };
 
     function handleUncheckAll() {
@@ -194,7 +237,7 @@ export default function Main ({whichSection}) {
                     isChecked:false})
             });
         setTags(newtags);
-        console.log(tags);
+        //console.log(tags);
     };
     
     function handleTypeCheckAll() {
@@ -229,24 +272,24 @@ export default function Main ({whichSection}) {
                     {tags !== undefined && 
                         <Col md={{ span: 2, offset: 0 }} className="taglist"> 
                             <Row>
-                            <TagList 
-                                taglist={tags}
-                                handleChange={handleTagCbClick}
-                                checkAll={handleCheckAll}
-                                uncheckAll={handleUncheckAll}
-                                runTagFilter={runTagFilter}
-                                title={"Topic"}
-                                /> 
+                                <TagList 
+                                    taglist={tags}
+                                    handleChange={handleTagCbClick}
+                                    checkAll={handleCheckAll}
+                                    uncheckAll={handleUncheckAll}
+                                    runTagFilter={runTagFilter}
+                                    title={"Topic"}
+                                    /> 
                             </Row>
                             <Row>
-                            <TagList 
-                                taglist={types}
-                                handleChange={handleTypeCbClick}
-                                checkAll={handleTypeCheckAll}
-                                uncheckAll={handleTypeUncheckAll}
-                                runTagFilter={runTypeFilter}
-                                title={"Type"}
-                                />  
+                                <TagList 
+                                    taglist={types}
+                                    handleChange={handleTypeCbClick}
+                                    checkAll={handleTypeCheckAll}
+                                    uncheckAll={handleTypeUncheckAll}
+                                    runTagFilter={runTypeFilter}
+                                    title={"Type"}
+                                    />  
                             </Row>
                         </Col>}
                     {pageObjects!== undefined && 

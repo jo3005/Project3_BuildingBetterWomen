@@ -88,7 +88,7 @@ function App(props) {
                 <Landing/>
               </Route>
             </Switch>
-          <Footer />
+            {whichPage !== "landing" && whichPage !== "home" && whichPage !== "" && <Footer />}
         </Container>
       </div>
     </Router>
