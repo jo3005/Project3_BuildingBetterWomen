@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 
 
-import NavbarHdg from "./components/containers/NavbarHdg";
+import NavbarHdg from "./components/containers/NavbarHdg/index.js";
 import Footer from "./components/containers/Footer";
 import Wrapper from "./components/containers/Wrapper";
 
@@ -39,8 +39,9 @@ function App(props) {
   return (
     <Router>
       <div  >
+      {whichPage !== "landing" && whichPage !== "home" && whichPage !== "" && <NavbarHdg activePage={whichPage}/>}
         <Container fluid>
-            {whichPage !== "landing" && whichPage !== "home" && whichPage !== "" && <NavbarHdg activePage={whichPage}/>}
+            
             <Switch>
               <Route path="/landing"><Landing /></Route>
               <Route path="/money">

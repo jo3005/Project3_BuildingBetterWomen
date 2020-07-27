@@ -1,27 +1,29 @@
-.navbar-bbw {
-    background-color: rgb(248, 224, 228);
-    color: teal;
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5);
 }
 
-li.nav-item{
-    font-size: 0.8rem;
-    color: teal;
+.navbar, .navbar-dark {
+    background-color: rgb(202, 3, 202);
+    color:white;
 }
 
-a.nav-link {
-    font-size: 0.8rem;
-    color: teal;
+h1.navbar-bbw {
+    color:white;
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 2rem;
+}
+a.nav-link>p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
     margin-left: 5px;
     margin-right: 5px;
     padding-left: 5px;
     padding-right: 5px;
+    font-family: 'Love Ya Like A Sister', cursive;
 }
 
-.nav {
-    flex-wrap: right;
-}
-
-.navbar-toggler.btn.btn.btn-primary {
-    color:teal;
-    float:right;
+a.nav-link:active>p {
+    color: rgba(255, 255, 255, 1);
+    font-weight:semi-bold;
+    
 }

@@ -9,3 +9,30 @@
     background-color: white;
     border-width: 0px ;
 }
+
+.form-check-input:checked{
+    background-color: white;
+    color:lightgrey
+}
+
+.dropdown-menu.show{
+    background-color: white;
+    color:rgb(202, 3, 202)
+}
+
+.form-check-label {
+    color:navy;
+    font-size:0.8rem ;
+    margin: 2px;
+}
+li.dropdown-item {
+    margin-left: 3px;
+    padding-left: 10px;
+    padding-bottom: 3px;
+}
+ul.show.dropdown {
+    margin-bottom: 10px;
+}
+.list-group-horizontal {
+    justify-content: space-around;
+}

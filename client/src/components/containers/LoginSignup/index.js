@@ -9,9 +9,8 @@ export default function Loading() {
   return (
       <>
         {/* //Login and signup buttons */}
+        <Button id="login" href="/login">Browse </Button>
         <Button id="login" href="/login">Login </Button>
-        {" "}
-        <Button id="register" href="/register">Register</Button>
        
 
     </>

@@ -69,7 +69,9 @@ export default function Main ({whichSection}) {
                 
                 //console.log("data:", results.data);
                 alltaglist=getAllTags(apiresults.data);
+                
                 const newtypes=getAllTypes(apiresults.data);
+                console.log("newtypes",newtypes)
                 setTypes(newtypes);
                 return alltaglist;
             })
@@ -146,7 +148,7 @@ export default function Main ({whichSection}) {
             setTags(newset);
             //console.log("just changed tagset to:",newset)
         }
-        e.preventDefault();
+        
         const index=Number(e.target.id.substring(3,4));
         
         invertCbTagArray(index);       
@@ -161,7 +163,7 @@ export default function Main ({whichSection}) {
             setTypes(newset);
             //console.log("just changed tagset to:",newset)
         }
-        e.preventDefault();
+        //e.preventDefaults();
         const index=Number(e.target.id.substring(3,4));
         
         invertCbTypeArray(index);       
@@ -220,8 +222,7 @@ export default function Main ({whichSection}) {
         <>
             <Container fluid >
                 <Row>
-                    <h1> Content: {whichSection} </h1>
-                    <HeaderBlock />
+                    <HeaderBlock whichSection={whichSection}/>
                 </Row>
                 
                 <Row>
@@ -234,6 +235,7 @@ export default function Main ({whichSection}) {
                                 checkAll={handleCheckAll}
                                 uncheckAll={handleUncheckAll}
                                 runTagFilter={runTagFilter}
+                                title={"Topic"}
                                 /> 
                             </Row>
                             <Row>
@@ -243,11 +245,12 @@ export default function Main ({whichSection}) {
                                 checkAll={handleTypeCheckAll}
                                 uncheckAll={handleTypeUncheckAll}
                                 runTagFilter={runTypeFilter}
+                                title={"Type"}
                                 />  
                             </Row>
                         </Col>}
                     {pageObjects!== undefined && 
-                        <Col md={{ span: 9, offset: 0 }} className="results"> 
+                        <Col md={{ span: 10, offset: 0 }} className="results"> 
                             <AllObjects 
                                 data={pageObjects}
                                 onThumbsUpClick={onThumbsUpClick}

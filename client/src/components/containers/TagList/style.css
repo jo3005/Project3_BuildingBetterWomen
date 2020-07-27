@@ -3,12 +3,13 @@
 .taglist{
     padding:0.25rem;
     margin: 0px;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 .btn {
     padding: 3px;
     margin: 3px;
-    font-size: 0.7rem;
+    font-size: 1rem;
+    font-family: 'Love Ya Like A Sister', cursive;
 
 }
 .list-group,.list-group.list-group-horizontal{
@@ -16,4 +17,24 @@
     
 }
 
+.dropdown-toggle {
+    width:100%;
+    
+}
+
+ul.dropdown {
+    padding: 5px;
+    padding-top: 0px;
+    width:100%;
+    
+    
+}
+.taglist.container {
+    margin-top: 0px;
+}
+.filterListBtns {
+    background-color: grey;
+    border-color:grey;
+    min-width: 100px;
+}
 

@@ -7,15 +7,15 @@ export default function AttributeCheckBox(props){
     return (
         <>
             <Form>
-              <Form.Check 
-                    label={props.tagName}
-                    onChange={props.handleChange}
-                    checked={props.isChecked}
-                    
-                    id={"cb_"+ props.whichTag}
-                    
-                    key={props.tagName}
-                    className="tagCheckBox"/>  
+              <Form.Check key={props.tagName} 
+                        label={props.tagName} 
+                        className="tagCheckBox" 
+                        onChange={props.handleChange} 
+                        id={"cb_"+ props.whichTag} 
+                        checked={props.isChecked}
+                        
+                />
+                
             </Form>
                 
         </>

@@ -10,13 +10,18 @@ export default function ItemObject (props){
     return (
         <Card fluid="true" >
             <Card.Header className="container noTopMargin" >
-                
-                <Row className="noTopMargin flex"> 
+            
+                <Row className="noTopMargin flex">
+                    <Col md="2" className="justify-content-left"  > 
+                        <Card.Text className="itemType">{data.type.toUpperCase()}</Card.Text>  
+                            
+                    </Col>
                     <Col md="8"  className="justify-content-left" > 
                         {data.logoUrl.length>0 && <Card.Img src={data.logoUrl} className="itemLogo"/>}
                     </Col>
                     <Col md="2" className="likedislikebtns justify-content-right"  > 
                         <LikeDislikeBtns {...props} ></LikeDislikeBtns>
+                        
                     </Col>
                 </Row>
                 
@@ -24,11 +29,11 @@ export default function ItemObject (props){
                 
             </Card.Header>
             <Card.Body>
-                <Col >
+                
                     <Row>
                         <Col>{data.headingText.length>0 && <Card.Title className="itemTitle">{data.headingText}</Card.Title>}</Col>
-                        <Col xs="4">
-                            <Card.Text className="itemType">{data.type}</Card.Text> 
+                        <Col xs="3">
+                            
                         </Col>
                     </Row>
                     
@@ -52,7 +57,7 @@ export default function ItemObject (props){
                                 </ListGroup.Item>)
                         })}      
                     </ListGroup>)} 
-                    </Col>   
+                    
             </Card.Body>
             
         </Card>

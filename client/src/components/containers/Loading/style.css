@@ -1,3 +1,47 @@
-.landingPage{
+.landingPage,body{
     justify-content: center;
+    background-color: rgb(255, 249, 250);
+}
+
+.landing-header-block{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding:0px;
+    text-align:center;
+    image-rendering: optimizeSpeed;
+    height: 100%;
+   
+}
+.card-img-overlay{
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    padding:5%;
+    
+}
+.card-img-overlay::before{
+    background-color:  rgb(234, 251, 234);
+    background-size: cover;
+    content: "";
+    display: block;
+    position: relative;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: -2;
+    opacity:60%;
+
+}
+
+.card-title>h1{
+    font-family:'Love Ya Like A Sister', cursive;
+    font-size: 2rem;
+    
+    color:white;
+    background-color:navy;
+    width:auto;
+}
+
+.blockquote{
+    font-size: 1.25rem;
 }

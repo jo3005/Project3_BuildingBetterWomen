@@ -1,5 +1,5 @@
 .fontAwesomeIcons{
-    color:darkblue;
+    color:navy;
     margin-right: 3pt;
     padding:0pt;
     font-size: 0.8rem;
@@ -11,7 +11,7 @@
     
     border-bottom-left-radius: 5px;
     border-top-right-radius: 5px;
-    background-color: rgb(237, 253, 238);
+    background-color: white ;
     align-items: right;
     font-size: 0.8rem;
     padding: 0px;

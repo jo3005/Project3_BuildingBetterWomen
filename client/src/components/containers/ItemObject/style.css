@@ -1,5 +1,5 @@
 .itemLogo{
-    max-height:75px;
+    max-height:60px;
     width:auto;
     padding-top: 10px;
     
@@ -19,6 +19,7 @@
     margin-top:0px;
     padding-top: 0px;
     padding-right: 0px;
+    padding-left:0px;
     margin-left: 0px;
     margin-right:0px;
     justify-content: space-between ;
@@ -37,9 +38,10 @@
     justify-content: flex-end;
 }
 .itemTag{
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     color: lightsteelblue;
     border:none;
+    
 
 }
 .list-group-horizontal {
@@ -47,7 +49,12 @@
     padding-left: 0px;
 }
 
-
+.itemType{
+    font-size: 0.8rem;
+    color: grey;
+    word-wrap: normal;
+    font-family: 'Love Ya Like A Sister', cursive;
+}
 .card{
     padding-top: 0px;
     margin-top: 0px;
