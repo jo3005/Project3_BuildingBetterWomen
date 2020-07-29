@@ -31,7 +31,7 @@ const contentSchema = new Schema({
     required: false
   },
   contentText:{
-    type: Buffer,
+    type: String,
     required:false
   },
   url:{

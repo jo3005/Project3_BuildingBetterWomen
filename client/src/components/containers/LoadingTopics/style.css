@@ -1,16 +1,63 @@
+
+#moneybtn{
+  background-image: url("../../../assets/images/joshua-hoehne-BeGCWVqpucE-unsplash.jpg");
+  background-size: 100%;
+  background-clip: border-box;
+  background-position-y: center;
+  background-position-x: center;
+  z-index:10;
+}
+#moneybtn::hover{
+  background-color: navy;
+  z-index:11;
+}
+
+#handybtn{
+  background-image: url("../../../assets/images/katie-rodriguez-NP9kbCXeVK0-unsplash.jpg");
+  background-size: 90%;
+  background-clip: border-box;
+  background-position-y: center;
+  
+}
+
+#legalbtn{
+  background-image: url("../../../assets/images/christina-wocintechchat-com-vzfgh3RAPzM-unsplash.jpg");
+  
+  background-size: 100%;
+  background-clip: border-box;
+  background-position-y: center;
+  
+}
+
+#jobbtn{
+  background-image: url("../../../assets/images/christina-wocintechchat-com-vzfgh3RAPzM-unsplash.jpg");
+  background-size: 100%;
+  background-clip: border-box;
+  background-position-y: center;
+  
+}
+
+#mentalbtn{
+  background-image: url("../../../assets/images/emma-simpson-mNGaaLeWEp0-unsplash.jpg");
+  background-size: 100%;
+  background-clip: border-box;
+  background-position-y: center;
+  
+}
 .landingBtn {
+    min-width: 70%;
     margin-top: 10px;
     margin-bottom: 10px;
+    /* color: rgb(160,2,160); */
     color: navy;
     padding-top: 5%;
     padding-bottom: 6%;
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: bolder;
-    border-radius: 5px;
-    background-image: url("../../../assets/images/jumbotron_pic.jpg");
-    background-size:cover ;
+    text-shadow: 2px 2px 2px white;
+    border: navy solid 2pt;
     z-index: 50;
-    border-width:0;
+    box-shadow: 20px 20px 20px grey;
   }
 
   .landingBtn::before{
@@ -19,21 +66,27 @@
     display: block;
     background-color:white;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 20%;
+    left: 20%;
+    width: 060%;
+    height: 60%;
+    border-radius: 5px;
     z-index: -2;
-    opacity:0.5;
+    opacity:0.6;
   }
 
   .landingBtn:hover{
     background-color: darkblue;
+    text-shadow: 2px 2px 2px grey;
   }
   
   .btn-group-vertical{
-    width: 100%;
-    align-items: flex-start;
+    background-color: rgb(235, 233, 233);
+    min-width: 100%;
+    align-items: middle;
+    position: relative;
+    font-family: 'Love Ya Like A Sister', cursive;
+    
   }
 
   .btn-group{

@@ -4,6 +4,7 @@ import {Form} from "react-bootstrap"
 
 
 export default function AttributeCheckBox(props){
+    console.log(props.handleChange)
     return (
         <>
             <Form>
@@ -13,6 +14,7 @@ export default function AttributeCheckBox(props){
                         onChange={props.handleChange} 
                         id={"cb_"+ props.whichTag} 
                         checked={props.isChecked}
+                        
                         
                 />
                 

@@ -6,8 +6,7 @@
 }
 .headerLogo{}
 
-.likedislikebtns.col-2{
-    text-align: end;
+.likedislikebtns{
     
 }
 
@@ -35,41 +34,106 @@
     justify-content: flex-end;
 }
 .itemTag{
-    font-size: 0.6rem;
-    color: lightsteelblue;
+    font-size: 0.8rem;
+    color: black;
     border:none;
-    
+    margin-left: 10px;
+    margin-right: 10px;
 
 }
 .list-group-horizontal {
     margin-left: 0px;
     padding-left: 0px;
 }
+.itemTag.list-group-item{
+    margin-left: 10px;
+    margin-right: 10px;
+    list-style-type: disc;
+}
+
+.taglistgroup{
+    margin-top:0px;
+    margin-left:5px;
+    padding-left:0px;
+    margin-bottom: 5px;
+    list-style-type:disc;
+}
+.body-contents.col>div.list-group {
+    
+}
 .itemTitle{
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: navy;
 
 }
-.itemSubtitle{}
+.itemSubtitle{
+    font-size: 1rem;
+    margin-bottom: 3px;
+    font-weight:normal;
+    color: navy;
 
-.itemContentText{}
+}
+.itemContentText.card-text {
+    font-size: 0.9rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
-.itemUrl{}
+}
+p.tagPrefix{
+    font-size: 0.9rem;
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
-.itemLink{}
+.itemUrl{
+    font-size: 0.9rem;
+    word-wrap: normal;
+}
+
+.itemLink{
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
 .itemType{
-    font-size: 0.7rem;
-    color: grey;
+    font-size: 0.9rem;
+    color: rgb(160, 2, 160);
     word-wrap: normal;
     font-family: 'Love Ya Like A Sister', cursive;
+    margin-top: 10px;
+    margin-left: 3px;
+    
 }
 .card{
     padding: 0px;
     margin: 0px;
+    margin-bottom: 5px;
+    border-top:1pt rgb(160, 2, 160) solid;
+    border-bottom:1pt rgb(160, 2, 160) solid;
+    border-radius: 0;
+    box-shadow: 10px 20px 30px rgb(160,180,200);
 }
 .card-img{
     justify-self: left;
 }
 .card-body {
-    padding: 0.5rem;
+    padding: 5px;
     margin-left: 0rem;
 }
+.btnLDrow{
+    border-top:1pt rgb(160, 2, 160) solid;
+    border-bottom:1pt rgb(160, 2, 160) solid;
+}
+.contentCards.card >div.noTopMargin.card-header {
+    border-radius: 0px;
+    border-bottom: 1pt rgb(160, 2, 160) solid;
+
+}
+.contentCardsBody{
+    border-top: 1pt rgb(160, 2, 160) solid;
+}
+

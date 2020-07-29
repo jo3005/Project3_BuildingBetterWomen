@@ -1,6 +1,7 @@
 html,body,p {
     font-family: 'Roboto', sans-serif;
     font-size: 12pt; 
+    
 }
 
 
@@ -10,5 +11,9 @@ html,body,p {
 }
 .taglist,.results {
     padding-top: 5px;
+}
+
+.results {
+    width:100%;
 }
 

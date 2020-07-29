@@ -44,51 +44,17 @@ function App(props) {
             
             <Switch>
               <Route path="/landing"><Landing /></Route>
-              <Route path="/money">
-                <Wrapper>
-                  <Main whichSection="finances"  />
-                </Wrapper>
-              </Route>
-              <Route path="/handywoman">
-                <Wrapper>
-                  <Main whichSection="practical"  />
-                </Wrapper>
-              </Route>
-              <Route path="/legal">
-                <Wrapper>
-                  <Main whichSection="legal"  />
-                </Wrapper>
-              </Route>
-              <Route path="/jobs">
-                <Wrapper>
-                  <Main whichSection="jobs"/>
-                </Wrapper>
-              </Route>
-              <Route path="/mentalhealth">
-                <Wrapper>
-                  <Main whichSection="mentalhealth"/>
-                </Wrapper>
-              </Route>
-              <Route path="/details">
-                <Wrapper>
-                  <Details />
-                </Wrapper>
-              </Route>
-              <Route path="/login">
-                <Wrapper>
-                  <Login />
-                </Wrapper>
-              </Route>
-              <Route path="/register">
-                <Wrapper>
-                  <Register />
-                </Wrapper> 
-              </Route>
-              <Route path="/">
-                <Landing/>
-              </Route>
+              <Route path="/money"> <Main whichSection="finances"  /></Route>
+              <Route path="/handywoman"><Main whichSection="practical"  /></Route>
+              <Route path="/legal"><Main whichSection="legal"  /></Route>
+              <Route path="/jobs"><Main whichSection="jobs"/> </Route>
+              <Route path="/mentalhealth"><Main whichSection="mentalhealth"/></Route>
+              <Route path="/details"><Details /></Route>
+              <Route path="/login"><Login /></Route>
+              <Route path="/register"><Register /></Route>
+              <Route path="/"><Landing/></Route>
             </Switch>
-            {whichPage !== "landing" && whichPage !== "home" && whichPage !== "" && <Footer />}
+            {whichPage !== "landing" && whichPage !== "home" && whichPage !== "" && whichPage !== "/" && <Footer /> }
         </Container>
       </div>
     </Router>

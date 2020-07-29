@@ -10,7 +10,7 @@ function NavbarHdg(props) {
     <Navbar collapseOnSelect="true" 
             expand="lg"  
             className="navbar-bbw" 
-            defaultActiveKey={whichPage} 
+            activekey={whichPage} 
             as="ul" 
             justify="right" 
             sticky="top"

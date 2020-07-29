@@ -2,14 +2,14 @@ import axios from 'axios';
 
 export default  {
     getAllTopicData: function(topic){
-        console.log("getting data for topic:", topic);
+        //console.log("getting data for topic:", topic);
         return axios.get('/api',{
             params:{
                 type:topic
             }})
     },
     getOneTopicData: function(whichId){
-        console.log("getting data for topic:", whichId);
+        //console.log("getting data for topic:", whichId);
         return axios.get(`/api/${whichId}`);
     },
     getHiddenData: function(){

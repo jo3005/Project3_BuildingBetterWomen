@@ -13,22 +13,20 @@ export default function Loading() {
 
   return (
       <>
-        <Card className="text-center landing-header-block" fluid  >
-          <Card.Img src={jumbopic} fluid/>
-          <Card.ImgOverlay fluid>
-            <Card.Body>
-              <Card.Title><h1>Building Better Women</h1></Card.Title>
-              
-            <LoginSignup /> 
-            </Card.Body>
-            
-          </Card.ImgOverlay>
-        </Card>
-        <blockquote className="blockquote">Empowering women after the loss of a partner.</blockquote>
-        <Row fluid><Col fluid><Button>Down</Button></Col></Row>
-        <Container className="landingPage" fluid justify="center">
-          <Row fluid><LoadingTopics /></Row>
-          
+      <Container className="landingPage" fluid="true" >
+        
+          <Jumbotron fluid className="landingjumbo">
+            <h1>Building Better Women</h1>
+            <blockquote>Empowering women by helping them build their skillset. </blockquote>
+            <p><LoginSignup /> </p>
+          </Jumbotron>
+        
+          <LoadingTopics />
+        
+        
+        
+        
+        
           
         </Container>
         

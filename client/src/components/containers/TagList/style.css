@@ -5,11 +5,25 @@
     margin: 0px;
     font-size: 1rem;
 }
-.btn {
-    padding: 3px;
-    margin: 3px;
+.tagbtn {
+    padding:0px;
+}
+
+
+Button#bg-nested-dropdown-Topic,
+Button#bg-nested-dropdown-Type{
+    padding: 10px;
+    margin: 0px;
     font-size: 1rem;
     font-family: 'Love Ya Like A Sister', cursive;
+    background-color: navy;
+   
+    min-width: 150px ;  
+    box-shadow: 10px 20px 30px rgb(160,180,200);
+
+}
+
+div.taglist.container {
 
 }
 .list-group,.list-group.list-group-horizontal{
@@ -23,16 +37,23 @@
 }
 
 ul.dropdown {
-    padding: 5px;
-    padding-top: 0px;
-    width:100%;    
+    margin-left: 15px;
+    margin-right: 15px;
+    padding:0;
 }
 .taglist.container {
     margin-top: 0px;
 }
-.filterListBtns {
-    background-color: grey;
-    border-color:grey;
-    min-width: 100px;
-}
 
+.filterListBtns {
+    background-color: rgb(160,180,200);
+    border-color:rgb(160,180,200);;
+    min-width: 150px;
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 0.8rem;
+    margin: 3px;
+
+}
+.filterListBtns:hover,.filterListBtns:checked {
+    background-color: navy;
+}

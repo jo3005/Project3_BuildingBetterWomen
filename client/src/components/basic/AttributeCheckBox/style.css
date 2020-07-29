@@ -1,27 +1,20 @@
-.input-group,
-.input-group-checkbox,
-.input-group-prepend,
+
 .input-group-text{
     padding:0 0.25rem;
     margin: 0px;
     font-size: 0.8rem;
-    line-height: 1;
+    line-height: 0.9rem;
     background-color: white;
     border-width: 0px ;
 }
 
-.form-check-input:checked{
-    background-color: white;
-    color:lightgrey
-}
-
 .dropdown-menu.show{
     background-color: white;
-    color:rgb(202, 3, 202)
+    color:rgb(160,2,160)
 }
 
 .form-check-label {
-    color:navy;
+    color:black;
     font-size:0.8rem ;
     margin: 2px;
 }
@@ -29,6 +22,7 @@ li.dropdown-item {
     margin-left: 3px;
     padding-left: 10px;
     padding-bottom: 3px;
+    padding-right: 10px;
 }
 ul.show.dropdown {
     margin-bottom: 10px;
@@ -36,3 +30,13 @@ ul.show.dropdown {
 .list-group-horizontal {
     justify-content: space-around;
 }
+.form-check-input{
+    box-shadow: 3px 3px 3px rgb(160,180,200);
+    
+}
+.filterListBtns{
+    box-shadow: 3px 3px 3px rgb(160,180,200);
+    border-bottom: #92a4b4 1pt solid;
+    border-right: #92a4b4 1pt solid;
+    border-radius: 3px;
+}   

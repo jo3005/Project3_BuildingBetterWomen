@@ -13,7 +13,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/bbwcontent",
 
 const Contents = [{
   topic:"money",
-  type: "supplier",
+  type: "Approved Supplier",
   headingText: "Carbon Group",
   logoUrl:"https://carbongroup.com.au/assets/images/logo.svg",
   author:"",
@@ -27,7 +27,7 @@ const Contents = [{
 
 },
 {topic:"money",
-  type: "supplier",
+  type: "Approved Supplier",
   headingText: "Cornish Wealth Management",
   logoUrl:"https://perthfinancialplanning.com.au/wp-content/uploads/2018/12/Cornish.png",
   author:"",
@@ -53,6 +53,7 @@ const Contents = [{
   tags:["financial advice","insurance","budgeting & saving","superannuation & retirement","investing","loans,credit & debt","banking"],
   include:true
   }
+  
 ];
 
 db.Content

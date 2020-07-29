@@ -6,14 +6,31 @@
     
 }
  .btn-group {
-    
-    border: 1pt  lightgrey solid;
-    
-    border-bottom-left-radius: 5px;
-    border-top-right-radius: 5px;
-    background-color: white ;
-    align-items: right;
-    font-size: 0.8rem;
+    margin:0;
+    padding: 0;
+    max-width: 150px;;
+    align-self: flex-end;
+    z-index: 200;
+    background: transparent
+
+}
+div.btnLDrow.row{
+    margin: 0px;
     padding: 0px;
-    margin:0px;
+    
+    border:rgb(160,2,160);
+}
+
+button.btn.btn.btn-link{
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom:0;
+}
+
+.badge {
+    margin: 5px;
+    padding: 5px;
+    background-attachment: navy;
+    color: rgb(160,2,160);
+    border:rgb(160,2,160);
 }

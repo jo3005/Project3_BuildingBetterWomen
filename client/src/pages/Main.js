@@ -2,7 +2,7 @@ import React,{useState,useEffect} from "react";
 import HeaderBlock from "../components/containers/HeaderBlock"
 import TagList from "../components/containers/TagList"
 import AllObjects from "../components/containers/AllObjects"
-import {Col,Row,Container} from "react-bootstrap"
+import {Col,Row,Container,Image} from "react-bootstrap"
 import "./style.css"
 
 //import "../utils/API"
@@ -56,7 +56,7 @@ export default function Main ({whichSection}) {
             }); 
             
             //create array from set of types
-            console.log(typesObj);
+            //console.log(typesObj);
             return (typesObj);
         };
         
@@ -65,24 +65,20 @@ export default function Main ({whichSection}) {
             .then(apiresults=>{
                 setPageObjects(apiresults.data);
                 setAllPageObjects(apiresults.data);
-                console.log("got initial data",allPageObjects);
+                //console.log("got initial data",allPageObjects);
                 
                 //console.log("data:", results.data);
                 alltaglist=getAllTags(apiresults.data);
                 
                 const newtypes=getAllTypes(apiresults.data);
-                console.log("newtypes",newtypes)
+                //console.log("newtypes",newtypes)
                 setTypes(newtypes);
                 return alltaglist;
             })
             .then((alltaglist)=>{
                 setTags(alltaglist);
-                console.log("got initial taglist",tags);
+                //console.log("got initial taglist",tags);
                 return(allPageObjects.data)
-            })
-            .then((obj)=>{
-                const newtypes=getAllTypes(allPageObjects.data.data);
-                setTypes(newtypes);
             })
             .catch(err => console.log(err));
     };
@@ -99,17 +95,18 @@ export default function Main ({whichSection}) {
         
     },[tags,types,allPageObjects]);
 
+    //Filters all page objects by the selection in the "Filter by Topic" dropdown box
     function runTagFilter(){
         let data=[...allPageObjects];    
         data=data.filter((record)=>{
-            console.log("filtering data",tags)
+            //console.log("filtering data",tags)
             let includeRecord=false;
 
             //look for matches between checked tags and elements of tag array in dataset
             tags.forEach(tag=>{
                 if(tag.isChecked){
                     if(record.tags.includes(tag.tagName)){
-                        console.log("found a match: ", tag.tagName, record.headingText )
+                        //console.log("found a match: ", tag.tagName, record.headingText )
                         includeRecord= true;
                     }
                 }
@@ -118,18 +115,20 @@ export default function Main ({whichSection}) {
         });
         //console.log(data);
         setPageObjects(data);
-    }
+    };
+
+    //Filters all page objects by the selection in the "filter by Tag" dropdown box
     function runTypeFilter(){
         let data=[...allPageObjects];    
         data=data.filter((record)=>{
-            console.log("filtering data",types)
+            //console.log("filtering data",types)
             let includeRecord=false;
 
             //look for matches between checked tags and elements of tag array in dataset
             types.forEach(tag=>{
                 if(tag.isChecked){
                     if(record.type===(tag.tagName)){
-                        console.log("found a match: ", tag.tagName, record.headingText )
+                        //console.log("found a match: ", tag.tagName, record.headingText )
                         includeRecord= true;
                     }
                 }
@@ -140,6 +139,7 @@ export default function Main ({whichSection}) {
         setPageObjects(data);
     }
     
+    // code that executes when a checkbox in the 'filter by topic' dropdown list is changed
     function handleTagCbClick(e) { 
         //console.log("handleCbClick - on checkbox change") 
         function invertCbTagArray(index){
@@ -155,6 +155,7 @@ export default function Main ({whichSection}) {
         return index;
     }
 
+// code that executes when a checkbox in the 'filter by type' dropdown list is changed    
     function handleTypeCbClick(e) { 
         //console.log("handleCbClick - on checkbox change") 
         function invertCbTypeArray(index){
@@ -170,6 +171,7 @@ export default function Main ({whichSection}) {
         return index;
     }
 
+    //update a single record in the array of (filtered) page objects after some element has been changed (eg. likes/dislikes)
     function updateOneInPageObjects(newObj){
         
         let currentPageObjects=[...pageObjects];
@@ -183,6 +185,7 @@ export default function Main ({whichSection}) {
         }
     };
 
+    //update a single record in the array of all page objects after some element has been changed (eg. likes/dislikes)
     function updateOneInAllPageObjects(newObj){
         
         let currentAllPageObjects=[...allPageObjects];
@@ -192,10 +195,11 @@ export default function Main ({whichSection}) {
         if(foundIndex>0){
             currentAllPageObjects[foundIndex]= newObj;
             setAllPageObjects(currentAllPageObjects); 
-            console.log(currentAllPageObjects);
+            //console.log(currentAllPageObjects);
         }
     };
 
+    //code that executes when the user presses the thumbs up button
     function onThumbsUpClick (e) {
         e.preventDefault();
         const record_id=e.target.id.slice(3);
@@ -208,9 +212,10 @@ export default function Main ({whichSection}) {
                 
             });
     };
-    
+    //code that executes when the user presses the thumbs down button
     function onThumbsDownClick (e) {
         e.preventDefault();
+        //extract the id of the record from the id of the object
         const record_id=e.target.id.slice(3);
         const current_val=e.target.value;
         API.increaseDislikes(record_id,current_val)
@@ -220,8 +225,9 @@ export default function Main ({whichSection}) {
             })
     };
     
+    //code that executes when the check all button is clicked in the 'filter by topic' dropdown box
     function handleCheckAll() {
-        console.log("handleCheckAll")
+        //console.log("handleCheckAll")
         const newtags = tags.map(onetag=>{
             return ({tagName: onetag.tagName, 
                     isChecked:true})
@@ -229,9 +235,9 @@ export default function Main ({whichSection}) {
         setTags(newtags);
         //console.log(tags);
     };
-
+    //code that executes when the uncheck all button is clicked in the 'filter by topic' dropdown box
     function handleUncheckAll() {
-        console.log("handleUncheckAll")
+        //console.log("handleUncheckAll")
         const newtags = tags.map(onetag=>{
             return ({tagName: onetag.tagName, 
                     isChecked:false})
@@ -239,9 +245,9 @@ export default function Main ({whichSection}) {
         setTags(newtags);
         //console.log(tags);
     };
-    
+    //code that executes when the check all button is clicked in the 'filter by type' dropdown box
     function handleTypeCheckAll() {
-        console.log("handleCheckAll")
+        //console.log("handleCheckAll")
         const newtags = types.map(onetag=>{
             return ({tagName: onetag.tagName, 
                     isChecked:true})
@@ -249,9 +255,9 @@ export default function Main ({whichSection}) {
         setTypes(newtags);
         console.log(tags);
     };
-
+    //code that executes when the uncheck all button is clicked in the 'filter by type' dropdown box
     function handleTypeUncheckAll() {
-        console.log("handleUncheckAll")
+        //console.log("handleUncheckAll")
         const newtags = types.map(onetag=>{
             return ({tagName: onetag.tagName, 
                     isChecked:false})
@@ -270,8 +276,8 @@ export default function Main ({whichSection}) {
                 
                 <Row>
                     {tags !== undefined && 
-                        <Col md={{ span: 2, offset: 0 }} className="taglist"> 
-                            <Row>
+                        <Col md={{ span: 2, offset: 0 }} className="taglist" > 
+                            
                                 <TagList 
                                     taglist={tags}
                                     handleChange={handleTagCbClick}
@@ -280,8 +286,8 @@ export default function Main ({whichSection}) {
                                     runTagFilter={runTagFilter}
                                     title={"Topic"}
                                     /> 
-                            </Row>
-                            <Row>
+                            
+                            
                                 <TagList 
                                     taglist={types}
                                     handleChange={handleTypeCbClick}
@@ -290,15 +296,17 @@ export default function Main ({whichSection}) {
                                     runTagFilter={runTypeFilter}
                                     title={"Type"}
                                     />  
-                            </Row>
+                            
                         </Col>}
                     {pageObjects!== undefined && 
-                        <Col md={{ span: 10, offset: 0 }} className="results"> 
-                            <AllObjects 
-                                data={pageObjects}
-                                onThumbsUpClick={onThumbsUpClick}
-                                onThumbsDownClick={onThumbsDownClick}   
-                            /> 
+                        <Col md={{ span: 10, offset: 0 }} > 
+                            
+                                <AllObjects 
+                                    data={pageObjects}
+                                    onThumbsUpClick={onThumbsUpClick}
+                                    onThumbsDownClick={onThumbsDownClick}   
+                                /> 
+                            
                         </Col>
                     }
                 </Row>
