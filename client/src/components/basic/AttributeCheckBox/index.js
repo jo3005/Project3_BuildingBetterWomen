@@ -4,7 +4,7 @@ import {Form} from "react-bootstrap"
 
 
 export default function AttributeCheckBox(props){
-    console.log(props.handleChange)
+    //console.log(props.handleChange)
     return (
         <>
             <Form>

@@ -12,14 +12,14 @@ export default function LikeDislikeBtns(props){
     return (
         
             <ButtonGroup >
-                <Button size="sm" variant="outline" onClick={props.onThumbsUpClick} id={`lk_${data._id}`} value={data.likes}>
-                    <FontAwesomeIcon as="btn" icon={faThumbsUp} className="fontAwesomeIcons" id={`fl_${data._id}`} value={data.likes}></FontAwesomeIcon>
+                <Button size="sm" variant="outline" type="submit" onClick={props.onThumbsUpClick} id={`lk_${data._id}`} value={data.likes} className="ldbuttons">
+                    <FontAwesomeIcon as="button" icon={faThumbsUp} className="fontAwesomeIcons" id={`fl_${data._id}`} value={data.likes}></FontAwesomeIcon>
                     <a><Badge variant="light">{data.likes}</Badge></a>
                 </Button>
-                <Button size="sm" variant="outline" onClick={props.onThumbsDownClick} id={`dl_${data._id}`} value={data.dislikes} >
-                    <FontAwesomeIcon as="btn" icon={faThumbsDown} className="fontAwesomeIcons" onClick={props.onThumbsDownClick} id={`fd_${data._id}`} 
+                <Button size="sm" variant="outline" type="submit" onClick={props.onThumbsDownClick} id={`dl_${data._id}`} value={data.dislikes} className="ldbuttons">
+                    <FontAwesomeIcon as="button" icon={faThumbsDown} className="fontAwesomeIcons" onClick={props.onThumbsDownClick} id={`fd_${data._id}`} 
                         value={data.dislikes}></FontAwesomeIcon>
-                    <a><Badge variant="light">{data.dislikes}</Badge></a> 
+                    <a><Badge variant="light" >{data.dislikes}</Badge></a> 
                 </Button>
             </ButtonGroup>
 

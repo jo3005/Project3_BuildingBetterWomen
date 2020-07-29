@@ -46,8 +46,8 @@ function App(props) {
               <Route path="/landing"><Landing /></Route>
               <Route path="/money"> <Main whichSection="finances"  /></Route>
               <Route path="/handywoman"><Main whichSection="practical"  /></Route>
-              <Route path="/legal"><Main whichSection="legal"  /></Route>
-              <Route path="/jobs"><Main whichSection="jobs"/> </Route>
+              <Route path="/legal"><Main whichSection="legal" /></Route>
+              <Route path="/jobs"><Main whichSection="jobs" /> </Route>
               <Route path="/mentalhealth"><Main whichSection="mentalhealth"/></Route>
               <Route path="/details"><Details /></Route>
               <Route path="/login"><Login /></Route>

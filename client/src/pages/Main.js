@@ -67,7 +67,7 @@ export default function Main ({whichSection}) {
                 setAllPageObjects(apiresults.data);
                 //console.log("got initial data",allPageObjects);
                 
-                //console.log("data:", results.data);
+                console.log("data:", apiresults.data);
                 alltaglist=getAllTags(apiresults.data);
                 
                 const newtypes=getAllTypes(apiresults.data);
@@ -150,7 +150,7 @@ export default function Main ({whichSection}) {
         }
         
         const index=Number(e.target.id.substring(3,4));
-        
+        console.log(e.target);
         invertCbTagArray(index);       
         return index;
     }
@@ -201,12 +201,13 @@ export default function Main ({whichSection}) {
 
     //code that executes when the user presses the thumbs up button
     function onThumbsUpClick (e) {
-        e.preventDefault();
+        //e.preventDefault();
+        console.log(e.target);
         const record_id=e.target.id.slice(3);
         const current_val=e.target.value;
         API.increaseLikes(record_id,current_val)
             .then((res)=>{
-                //console.log("response",res.data)
+                console.log("response",res.data)
                 updateOneInPageObjects(res.data);
                 updateOneInAllPageObjects(res.data);
                 

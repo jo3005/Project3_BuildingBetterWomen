@@ -33,7 +33,7 @@ const db=require("./models/content")
 
 // Connect to the Mongo DB
 // =============================================================
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/bbwcontent",
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://heroku_bbw_stduser:dziewczynka2020@bbwcluster.kch4c.mongodb.net/bbwcontent?retryWrites=true&w=majority',
   {
     useNewUrlParser: true,
     useFindAndModify: false

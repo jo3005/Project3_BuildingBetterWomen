@@ -3,6 +3,7 @@
     margin-right: 3pt;
     padding:0pt;
     font-size: 0.8rem;
+    z-index: -45;
     
 }
  .btn-group {
@@ -10,8 +11,7 @@
     padding: 0;
     max-width: 150px;;
     align-self: flex-end;
-    z-index: 200;
-    background: transparent
+   
 
 }
 div.btnLDrow.row{
@@ -25,6 +25,12 @@ button.btn.btn.btn-link{
     width: 100%;
     margin-bottom: 0;
     padding-bottom:0;
+   
+}
+
+.ldbuttons {
+    z-index: 200;
+    background: transparent
 }
 
 .badge {
@@ -33,4 +39,5 @@ button.btn.btn.btn-link{
     background-attachment: navy;
     color: rgb(160,2,160);
     border:rgb(160,2,160);
+    z-index: -50;
 }

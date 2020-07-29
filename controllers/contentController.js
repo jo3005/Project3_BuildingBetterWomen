@@ -4,29 +4,9 @@ const db = require("../models");
 
 module.exports = {
   findAllTopicData: function(req, res) {
-    const whichTopic = function (input){
-      switch(input) {
-        case "money","finances":
-          return "money";
-          break;
-        case "handywoman":
-          return "practical";
-          break;
-        case "legal":
-          return "legal";
-          break;
-        case "mentalhealth":
-          return "mentalhealth";
-          break;
-        case "jobs":
-          return "jobs";
-          break;
-        default:
-          return "*"; 
-      
-    }
-  }
-    db.Content.find({topic:whichTopic(req.query.type),include:true})
+    console.log("Showing the type:",req.query.type);
+    db.Content.find({topic:(req.query.type),include:true})
+    .sort({topic:'asc', likes:'desc',dislikes:'asc'})
     .then(function(topics) {
       res.json(topics);
     })
