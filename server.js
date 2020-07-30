@@ -5,6 +5,9 @@ const compression = require("compression");
 const mongoose = require("mongoose");
 const logger = require('morgan');
 
+const bodyParser = require('body-parser');
+
+
 
 // Requiring passport as we've configured it
 // =============================================================
@@ -46,6 +49,8 @@ app.use(compression());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended : false}));
 
 // Routes
 // =============================================================

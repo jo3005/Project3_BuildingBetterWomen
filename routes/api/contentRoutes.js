@@ -1,4 +1,5 @@
-const ctr= require("../../controllers/contentController")
+const ctr= require("../../controllers/contentController");
+const em= require("../../controllers/emailController");
 
 module.exports = function(app) {
 
@@ -16,5 +17,9 @@ module.exports = function(app) {
     
     // delete content - but don't really delete it for now.  Just hide it by setting include=false
     app.put("/api/delete/:id",ctr.hideItem);
+
+    app.post("/submit",em.checkCaptcha);
+
+    app.post("/send",em.sendGmail);
  
 };

@@ -21,6 +21,9 @@ export default function LikeDislikeBtns(props){
                         value={data.dislikes}></FontAwesomeIcon>
                     <a><Badge variant="light" >{data.dislikes}</Badge></a> 
                 </Button>
+            
+
+                
             </ButtonGroup>
 
         

@@ -1,12 +1,16 @@
-import React from "react";
+import React,{useState,setState} from "react";
 
-//import {Col,Row,Container} from "react-bootstrap"
+import {Col,Button} from "react-bootstrap"
+import SubmitIdeaForm from "../SubmitIdeaForm"
 import "./style.css"
  
 
-export default function HeaderBlock ({whichSection}){
+export default function HeaderBlock (props){
+    const whichpage=props.whichSection
+    const [modalShow, setModalShow] = useState(false);
+
     let hdrtext="";
-    switch(whichSection) {
+    switch(whichpage) {
         case 'finances':
             hdrtext='Managing Your Finances';
             break;
@@ -28,7 +32,19 @@ export default function HeaderBlock ({whichSection}){
 
     return (
         <>
-            <h1 className="hdngtext"> {hdrtext} </h1>
+            <Col md="11">
+                <h1 className="hdngtext"> {hdrtext} </h1>
+            </Col>
+            <Col md="1"  >
+                <Button variant="primary" onClick={() => setModalShow(true)}>
+                    Suggest Content
+                </Button>
+                <SubmitIdeaForm 
+                    whichSection={whichpage}
+                    show={modalShow}
+                    onHide={()=> setModalShow(false)}
+                ></SubmitIdeaForm>
+            </Col>
         </>
     )
     

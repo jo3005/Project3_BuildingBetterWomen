@@ -2,10 +2,16 @@ import axios from 'axios';
 function whichTopic (input){
     let topic="";
     switch(input) {
-      case "money","finances":
+      case "money":
         topic= "money";
         break;
-      case "handywoman","practical":
+      case "finances":
+        topic= "money";
+        break;
+      case "handywoman":
+        topic= "practical";
+        break;
+      case "practical":
         topic= "practical";
         break;
       case "legal":
@@ -50,5 +56,14 @@ export default  {
     },
     deleteItem:function(whichId){
         return axios.post('/api/likes',{params:{_id:whichId}})
+    },
+   
+    sendMail:function(html_body){
+        return axios.post('/send',{htmlbody:html_body})
+    },
+    
+    checkGoogleCaptcha: function(key){
+
+        return axios.post(`/submit`,{value:key})
     }
 };

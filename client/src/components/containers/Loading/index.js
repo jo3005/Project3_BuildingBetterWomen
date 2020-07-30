@@ -4,8 +4,6 @@ import {Container,Col,Row,Jumbotron,Button,Image,Card,blockquote} from "react-bo
 import LoadingTopics from "../LoadingTopics"
 import LoginSignup from "../LoginSignup"
 
-import jumbopic from "../../../assets/images/jumbotron_pic.jpg"
-
 
 // Depending on the current path, this component sets the "active" className on the appropriate navigation link item
 export default function Loading() {

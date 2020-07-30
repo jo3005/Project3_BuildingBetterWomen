@@ -58,7 +58,7 @@ export default function ItemObject (props){
                                     {data.links.length > 0     &&
                                             (<ListGroup as="ol" variant="flush">
                                                 {data.links.map((link,index) =>  {
-                                                    return (<ListGroup.Item key={link._id} className= "itemLink">
+                                                    return (<ListGroup.Item key={link && index} className= "itemLink">
                                                             <Card.Link href={link} className= "itemLink">{link}</Card.Link>     
                                                         </ListGroup.Item>)
                                                 })}      

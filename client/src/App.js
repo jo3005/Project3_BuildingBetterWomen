@@ -10,7 +10,7 @@ import {
 
 import NavbarHdg from "./components/containers/NavbarHdg/index.js";
 import Footer from "./components/containers/Footer";
-import Wrapper from "./components/containers/Wrapper";
+
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import {Container} from "react-bootstrap"

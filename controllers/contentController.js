@@ -4,7 +4,7 @@ const db = require("../models");
 
 module.exports = {
   findAllTopicData: function(req, res) {
-    console.log("Showing the type:",req.query.type);
+    //console.log("Showing the type:",req.query.type);
     db.Content.find({topic:(req.query.type),include:true})
     .sort({topic:'asc', likes:'desc',dislikes:'asc'})
     .then(function(topics) {
@@ -12,7 +12,7 @@ module.exports = {
     })
     .catch(err => res.status(422).json(err))
     },
-
+    
   showHiddenData: function(req, res) {
     db.Content.find({include:false})
     .then(function(topics) {
@@ -45,5 +45,6 @@ module.exports = {
      })
     .catch(err => res.status(422).json(err))
   }
+  
 };
 
