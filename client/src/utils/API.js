@@ -77,7 +77,6 @@ export default  {
     },
     
     checkGoogleCaptcha: function(key){
-
         return axios.post(`/submit`,{value:key})
     }
 };

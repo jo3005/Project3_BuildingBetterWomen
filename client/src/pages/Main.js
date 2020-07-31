@@ -126,8 +126,6 @@ export default function Main ({whichSection}) {
             .catch(err => console.log(err));
     };
 
-    
-
     useEffect(()=>{
         getInitialData(allPageObjects)
     },[]);
@@ -291,15 +289,15 @@ export default function Main ({whichSection}) {
 
     //update a single record in the array of (filtered) page objects after some element has been changed (eg. likes/dislikes)
     function updateOneInPageObjects(newObj){
-        
+        console.log("updating page objects function");
         let currentPageObjects=[...pageObjects];
         const foundIndex=currentPageObjects.findIndex((objct)=>{
             return objct._id===newObj._id
         })
-        if(foundIndex>0){
+        if(foundIndex>=0){
             currentPageObjects[foundIndex]= newObj;
             setPageObjects(currentPageObjects); 
-            console.log(currentPageObjects);   
+            console.log("updating new state", currentPageObjects);   
         }
     };
 
@@ -310,35 +308,69 @@ export default function Main ({whichSection}) {
         const foundIndex=currentAllPageObjects.findIndex((objct)=>{
             return objct._id===newObj._id
         })
-        if(foundIndex>0){
+        if(foundIndex>=0){
             currentAllPageObjects[foundIndex]= newObj;
             setAllPageObjects(currentAllPageObjects); 
             //console.log(currentAllPageObjects);
         }
     };
 
+     //update a single record in the array of (filtered) page objects after some element has been changed (eg. likes/dislikes)
+     function updateOneInSupplierObjects(newObj){
+        console.log("updating page objects function");
+        let currentPageSuppliers=[...pageSuppliers];
+        const foundIndex=currentPageSuppliers.findIndex((objct)=>{
+            return objct._id===newObj._id
+        })
+        if(foundIndex>=0){
+            currentPageSuppliers[foundIndex]= newObj;
+            setPageSuppliers(currentPageSuppliers); 
+            console.log("updating new state", currentPageSuppliers);   
+        }
+    };
+
+    //update a single record in the array of all page objects after some element has been changed (eg. likes/dislikes)
+    function updateOneInAllSupplierObjects(newObj){
+        
+        let currentAllSupplierObjects=[...allPageSuppliers];
+        const foundIndex=currentAllSupplierObjects.findIndex((objct)=>{
+            return objct._id===newObj._id
+        })
+        if(foundIndex>=0){
+            currentAllSupplierObjects[foundIndex]= newObj;
+            setAllPageObjects(currentAllSupplierObjects); 
+            //console.log(currentAllPageObjects);
+        }
+    };
+
     //code that executes when the user presses the thumbs up button
     function onThumbsUpClick (e) {
-        //e.preventDefault();
-        console.log(e.target);
-        const record_id=e.target.id.slice(3);
-        const current_val=e.target.value;
+        e.preventDefault();
+        console.log("Thumbs up click", e.target);
+        
+        const record_id=e.currentTarget.id.slice(3);
+        const current_val=e.currentTarget.value;
         API.increaseLikes(record_id,current_val)
             .then((res)=>{
-                console.log("response",res.data)
+                console.log("response data",res.data)
+                console.log(res.data===pageObjects);
                 updateOneInPageObjects(res.data);
                 updateOneInAllPageObjects(res.data);
+                updateOneInSupplierObjects(res.data);
+                updateOneInAllSupplierObjects(res.data);
                 
             });
     };
     //code that executes when the user presses the thumbs down button
     function onThumbsDownClick (e) {
         e.preventDefault();
+        console.log("Thumbs down click", e.target);
         //extract the id of the record from the id of the object
-        const record_id=e.target.id.slice(3);
-        const current_val=e.target.value;
+        const record_id=e.currentTarget.id.slice(3);
+        const current_val=e.currentTarget.value;
         API.increaseDislikes(record_id,current_val)
             .then((res)=>{
+                console.log(res.data===allPageObjects);
                 updateOneInPageObjects(res.data);
                 updateOneInAllPageObjects(res.data);
             })
@@ -385,6 +417,7 @@ export default function Main ({whichSection}) {
         console.log(types);
     };
     
+    console.log("main js rerendered");
 
     return (
         <>
@@ -419,8 +452,16 @@ export default function Main ({whichSection}) {
                         </Col>}
                         <Col>
                             <Row>
-                                {pageSuppliers!==undefined && <Col md={{ span: 6, offset: 0 }}><AdCarousel data={pageSuppliers}/></Col>}
-                                {pageVideos!==undefined && <Col md={{ span: 6, offset: 0 }}><VideoCarousel data={pageVideos}/></Col> }
+                                {pageSuppliers!==undefined && <Col md={{ span: 6, offset: 0 }}>
+                                    <AdCarousel data={pageSuppliers} 
+                                                onThumbsUpClick={onThumbsUpClick}
+                                                onThumbsDownClick={onThumbsDownClick}
+                                    /></Col>}
+                                {pageVideos!==undefined && <Col md={{ span: 6, offset: 0 }}>
+                                    <VideoCarousel data={pageVideos}
+                                            onThumbsUpClick={onThumbsUpClick}
+                                            onThumbsDownClick={onThumbsDownClick}  
+                                    /></Col> }
                             </Row>
                         
                             {pageObjects!== undefined && 

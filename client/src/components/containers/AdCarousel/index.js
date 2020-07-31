@@ -9,8 +9,8 @@ import SectionHeading from "../../basic/SectionHeading"
 import "./style.css"
 
 
-export default function AdCarousel({data}){
-    const addata=data;
+export default function AdCarousel(props){
+    const addata=props.data;
     
     return (
         <>
@@ -21,7 +21,10 @@ export default function AdCarousel({data}){
                                 addata.map((ad,index)=>{
                                     return (
                                         <div key= {index}>
-                                            <AdInfo data={ad}/>
+                                            <AdInfo data={ad} 
+                                            onThumbsUpClick={props.onThumbsUpClick}
+                                            onThumbsDownClick={props.onThumbsDownClick}  
+                                            />
                                         </div>
                                     )
                                     

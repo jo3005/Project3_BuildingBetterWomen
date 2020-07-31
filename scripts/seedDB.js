@@ -3,7 +3,7 @@ const db = require("../models");
 
 
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://heroku_bbw_stduser:dziewczynka2020@bbwcluster.kch4c.mongodb.net/bbwcontent?retryWrites=true&w=majority',
+mongoose.connect(process.env.MONGODB_URI ,
   {
     useNewUrlParser: true,
     useFindAndModify: false

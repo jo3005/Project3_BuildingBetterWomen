@@ -22,7 +22,7 @@ function NavbarHdg(props) {
       <Navbar.Collapse id="responsive-navbar-nav" className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <Nav className="mr-right"> 
             <Nav.Item as="li">
-              <Nav.Link href="/home"><p className="bbw_navlink">Home</p></Nav.Link>
+              <Nav.Link href="/"><p className="bbw_navlink">Home</p></Nav.Link>
             </Nav.Item>
             <Nav.Item as="li">
               <Nav.Link href="/money"><p className="bbw_navlink">Money</p></Nav.Link>

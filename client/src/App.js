@@ -20,17 +20,25 @@ import Landing from  "./pages/Landing.js"
 import Login from  "./pages/Login.js"
 import Register from  "./pages/Register.js"
 
+import { useBackgroundImageRouter } from 'grass-roots-react'
+
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import {faThumbsUp,faThumbsDown} from '@fortawesome/free-solid-svg-icons';
 
 
 import "./App.css";
+import myImage from './assets/images/iStock-615806462.jpg'
+
 
 
 library.add(fab,faThumbsUp,faThumbsDown);
 
 function App(props) {
+  const backgroundImageMap = {"/home":myImage, 
+                              "/":myImage};
+  useBackgroundImageRouter(backgroundImageMap);
+  
   
   const whichPage=window.location.pathname.split('/')[1]; 
   
@@ -41,7 +49,7 @@ function App(props) {
         <Container fluid className="noMarginsOrPadding">
             
             <Switch>
-              <Route path="/landing"><Landing /></Route>
+              
               <Route path="/money"> <Main whichSection="finances"  /></Route>
               <Route path="/handywoman"><Main whichSection="practical"  /></Route>
               <Route path="/legal"><Main whichSection="legal" /></Route>

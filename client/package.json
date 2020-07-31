@@ -13,6 +13,7 @@
     "@fortawesome/react-fontawesome": "^0.1.11",
     "bootstrap": "^4.5.0",
     "font-awesome": "^4.7.0",
+    "grass-roots-react": "^0.4.26",
     "lodash": "^4.17.19",
     "mdbootstrap": "^4.19.1",
     "mdbreact": "^4.27.0",
