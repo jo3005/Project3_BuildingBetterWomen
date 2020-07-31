@@ -23,8 +23,6 @@ export default function Main ({whichSection}) {
 
     const [allObjects,setAllObjects]=useState([]);
     
-
-    
     const [tags,setTags]=useState([]);
     const [types,setTypes]=useState([]);
    
@@ -134,7 +132,7 @@ export default function Main ({whichSection}) {
         runTagFilter();
         runTypeFilter();
         
-    },[tags,types,allPageObjects]);
+    },[tags,types,allPageObjects,allPageSuppliers]);
 
     //Filters all page objects by the selection in the "Filter by Topic" dropdown box
     function runTagFilter(){
@@ -235,6 +233,8 @@ export default function Main ({whichSection}) {
         });
         //console.log(data);
         setPageSuppliers(data);
+
+
         data=[...allPageVideos];    
         data=data.filter((record)=>{
             //console.log("filtering data",types)
@@ -338,7 +338,7 @@ export default function Main ({whichSection}) {
         })
         if(foundIndex>=0){
             currentAllSupplierObjects[foundIndex]= newObj;
-            setAllPageObjects(currentAllSupplierObjects); 
+            setAllPageSuppliers(currentAllSupplierObjects); 
             //console.log(currentAllPageObjects);
         }
     };
