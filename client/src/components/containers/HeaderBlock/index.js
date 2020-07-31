@@ -35,12 +35,12 @@ export default function HeaderBlock (props){
             <Col md="8">
                 <h1 className="hdngtext"> {hdrtext} </h1>
             </Col>
-            <Col md="2">
+            {/* <Col md="2">
                 <Form inline className="searchForm" >
                     <Form.Control type="text" placeholder="Search..."  id="searchbox"/>
                 </Form>
-            </Col>
-            <Col md="2"  className="justify-content-right text-right">
+            </Col> */}
+            <Col md="4"  className="justify-content-right text-right">
                 <Button 
                     id="openModalBtn"
                     variant="primary" 
