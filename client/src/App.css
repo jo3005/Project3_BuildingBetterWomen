@@ -7,6 +7,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color:white;
+  
+}
+.body_container{
+  width:100%;
+  margin: 0;
+  padding:0;
+}
+noMarginsOrPadding{
+  width:100%;
+  margin: 0;
+  padding-left: 0px!important;
+  padding-right:0px!important;
+  padding:0;
 }
 
 body p {
@@ -57,4 +70,10 @@ code {
   to {
     transform: rotate(360deg);
   }
+}
+
+.landingPage{
+  width: 100%;
+  margin: 0;
+  padding:0;
 }

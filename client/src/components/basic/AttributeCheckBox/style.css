@@ -34,9 +34,10 @@ ul.show.dropdown {
     box-shadow: 3px 3px 3px rgb(160,180,200);
     
 }
-.filterListBtns{
-    box-shadow: 3px 3px 3px rgb(160,180,200);
-    border-bottom: #92a4b4 1pt solid;
-    border-right: #92a4b4 1pt solid;
-    border-radius: 3px;
-}   
+
+.tagListings{
+    background-color: white;
+}
+.tagCheckbox.form-check{
+    padding-right: 0px;
+}

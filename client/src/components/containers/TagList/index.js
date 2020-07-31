@@ -22,8 +22,9 @@ export default function AttributeList({taglist,handleChange,checkAll,uncheckAll,
                         <Dropdown.Item key={index}
                             as="li" 
                             eventKey={index.toString()} 
-                            collapseonselect="false" > 
-                        
+                            collapseonselect="false"  
+                            className="taglistElement">
+
                             <AttributeCheckBox 
                                 tagName={tag.tagName}
                                 isChecked={tag.isChecked}

@@ -1,0 +1,164 @@
+.itemLogo{
+    max-height:60px;
+    width:auto;
+    padding-top: 10px;
+}
+
+
+.justify-content-left {
+    align-self: left;
+}
+
+.justify-content-right {
+    align-self: right;
+    margin-top:0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    margin-right:0px;
+    justify-content: flex-end;
+}
+.itemTag{
+    font-size: 0.8rem;
+    color:navy;
+    border:none;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+.list-group-horizontal {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+.itemTag.list-group-item{
+    margin-left: 10px;
+    margin-right: 10px;
+    list-style-type: disc;
+}
+
+.taglistgroup{
+    color: navy;
+    margin-top:0px;
+    margin-left:0px;
+    padding-left:0px;
+    margin-bottom: 5px;
+    list-style: square;
+
+}
+.body-contents.col-md-6 {
+    margin: 0;
+    padding: 15px;
+    
+}
+.itemTitle{
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: navy;
+    justify-content: left;
+
+}
+.itemSubtitle{
+    font-size: 1rem;
+    margin-bottom: 3px;
+    font-weight:normal;
+    color: navy;
+
+}
+.maininfo.col-md-5,
+.leftalign{
+    justify-content: left;
+   
+}
+.itemTitle, .itemSubtitle, .itemUrl {
+    justify-content: left;
+
+}
+
+.itemContentText.card-text {
+    font-size: 0.9rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+p.tagPrefix.text-left.card-text{
+    font-size: 0.9rem;
+    margin:0px;
+    margin-top: 10px;
+    padding-left: 0;
+    padding-right: 0;
+
+}
+
+.itemUrl{
+    font-size: 0.9rem;
+    text-align: left;
+    align-self: left;
+    align-content: flex-start;
+    align-items: left;
+    justify-content: flex-start;
+    justify-self: flex-start;
+    justify-items: flex-start;
+    overflow-wrap: break-word;
+
+}
+
+.itemLink{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.itemType{
+    font-size: 0.9rem;
+    color: rgb(160, 2, 160);
+    word-wrap: normal;
+    font-family: 'Love Ya Like A Sister', cursive;
+    margin-top: 10px;
+    margin-left: 3px;
+    
+}
+.card{
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 5px;
+    
+    border-radius: 5pt;
+    
+}
+.card-img{
+    justify-self: left;
+}
+.card-body {
+    padding: 5px;
+    margin-left: 0rem;
+}
+.logobasebdr{
+    
+    border-bottom:1pt lightgrey solid;
+}
+
+.btnLDrow.imge.row{
+    align-content: center;
+    text-align: center;
+}
+
+image.adImage{
+    max-width:  300px;
+    margin: 20px;
+    padding: 20px;
+
+
+}
+.contentCards.card >div.noTopMargin.card-header {
+    border-radius: 3px;
+   
+
+}
+.adcardsBody{
+    
+}
+
+div.itemTag.list-group-item{
+    
+}

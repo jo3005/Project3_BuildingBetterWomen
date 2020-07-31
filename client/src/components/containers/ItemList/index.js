@@ -8,15 +8,15 @@ export default function ItemList(props){
     //console.log("ItemListProps",props)
     return (
        
-        <ListGroup >
-            <Accordion >
+        <ListGroup className="linksection">
+            <Accordion className="linkaccordion">
                 {props.data.length > 0 &&
                     props.data.map((data,index)=>{
                         return (<ItemObject key={index}
                                     data={data} 
                                     onThumbsUpClick={props.onThumbsUpClick} 
                                     onThumbsDownClick={props.onThumbsDownClick} 
-                                    
+                                    className="accordionItem"
                                 />)
                     })}
             </Accordion>

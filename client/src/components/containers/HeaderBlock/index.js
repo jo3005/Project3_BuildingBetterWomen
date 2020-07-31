@@ -40,7 +40,7 @@ export default function HeaderBlock (props){
                     <Form.Control type="text" placeholder="Search..."  id="searchbox"/>
                 </Form>
             </Col>
-            <Col md="2"  className="justify-contents-right">
+            <Col md="2"  className="justify-content-right text-right">
                 <Button 
                     id="openModalBtn"
                     variant="primary" 

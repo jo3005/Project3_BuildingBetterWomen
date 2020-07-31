@@ -5,7 +5,17 @@ const db = require("../models");
 module.exports = {
   findAllTopicData: function(req, res) {
     //console.log("Showing the type:",req.query.type);
-    db.Content.find({topic:(req.query.type),include:true})
+    db.Content.find({topic:(req.query.topic),include:true})
+    .sort({topic:'asc', likes:'desc',dislikes:'asc'})
+    .then(function(topics) {
+      res.json(topics);
+    })
+    .catch(err => res.status(422).json(err))
+    },
+
+  findAllSupplierTopicData: function(req, res) {
+    //console.log("Showing the type:",req.query.type);
+    db.Content.find({topic:(req.query.topic),include:true})
     .sort({topic:'asc', likes:'desc',dislikes:'asc'})
     .then(function(topics) {
       res.json(topics);

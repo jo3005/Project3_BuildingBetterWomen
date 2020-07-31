@@ -1,0 +1,18 @@
+.adImage{
+    
+    background-color: white;
+    color:navy
+}
+.carousel .slider-wrapper.axis-horizontal .slider .slide {
+    background-color: white;
+    color:navy;
+}
+.carousel .control-dots .dot.selected, .carousel .control-dots .dot:hover {
+    color:navy;
+    opacity: 100%;
+}
+.ytvideo{
+    min-height: 300px;
+    width: auto;
+    
+}

@@ -2,17 +2,16 @@
     margin-left: 0px;
     min-width: 100%;
     margin-right: 0px;
-    background-image: url("../../../assets/images/jumbotron_pic.jpg");
-    background-repeat: no-repeat;
     margin-bottom: 0px;
-    background-color: rgb(235, 233, 233);
-}
-.landingPage,body{
-    justify-content: center;
-    /* background-color: rgb(235, 233, 233); */
     
+    background-color: transparent;
 }
-
+.landingPage{
+    background-image: url("../../../assets/images/iStock-615806462.jpg");
+    background-size: cover;
+    image-rendering: optimizeSpeed;
+}
+/* 
 .landing-header-block{
     margin-top: 5%;
     margin-bottom: 5%;
@@ -21,8 +20,9 @@
     image-rendering: optimizeSpeed;
     height: 100%;
    
-}
-.jumbotron>h1{
+} */
+
+ .jumbotron>h1{
     font-family:'Love Ya Like A Sister', cursive;
     font-size: 3rem;
     text-align: center;
@@ -30,15 +30,17 @@
     width:auto;
     background-color: navy;
     
-    line-height: 6rem;
+    line-height: 3rem;
+    padding-top: 20px;
     margin-bottom: 0px;
     padding-bottom: 10px;
     text-shadow: 2px 2px 2px grey;
     
-}
+} 
 
 blockquote{
-    font-size: 1rem;
+    width:100%;
+    font-size: 1.5rem;
     color: white;
     text-align: center;
     font-family:'Love Ya Like A Sister', cursive;

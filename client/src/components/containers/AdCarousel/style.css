@@ -1,0 +1,14 @@
+.adImage{
+    max-height: auto;
+    max-width: 250px;
+    background-color: white;
+    color:navy
+}
+.carousel .slider-wrapper.axis-horizontal .slider .slide {
+    background-color: white;
+    color:navy;
+}
+.carousel .control-dots .dot.selected, .carousel .control-dots .dot:hover {
+    color:navy;
+    opacity: 100%;
+}

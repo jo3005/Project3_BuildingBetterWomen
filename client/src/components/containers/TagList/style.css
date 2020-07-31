@@ -50,12 +50,26 @@ ul.dropdown {
 .filterListBtns {
     background-color: rgb(160,180,200);
     border-color:rgb(160,180,200);;
-    min-width: 150px;
+    min-width: 100px;
     font-family: 'Love Ya Like A Sister', cursive;
     font-size: 0.8rem;
     margin: 3px;
+    box-shadow: 0px 0px 3px 3px rgb(255, 232, 235);
+    
+    border-radius: 3px;
+      
 
 }
 .filterListBtns:hover,.filterListBtns:checked {
     background-color: navy;
+}
+
+div.tagCheckBox.form-check:hover,
+li.taglistElement.dropdown-item:hover,
+div.tagCheckBox.form-check:focus,
+li.taglistElement.dropdown-item:focus{
+    background-color: rgb(255, 232, 235);
+    margin-right: 10px;
+    padding-right: 10px;
+    width:100%;
 }

@@ -1,0 +1,50 @@
+.landingjumbo{
+    margin-left: 0px;
+    min-width: 100%;
+    margin-right: 0px;
+    background-image: url("../../../assets/images/jumbotron_pic.jpg");
+    background-repeat: no-repeat;
+    margin-bottom: 0px;
+    background-color: rgb(235, 233, 233);
+}
+.landingPage,body{
+    justify-content: center;
+    /* background-color: rgb(235, 233, 233); */
+    
+}
+
+.landing-header-block{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding:0px;
+    text-align:center;
+    image-rendering: optimizeSpeed;
+    height: 100%;
+   
+}
+.jumbotron>h1{
+    font-family:'Love Ya Like A Sister', cursive;
+    font-size: 3rem;
+    text-align: center;
+    color:white;
+    width:auto;
+    background-color: navy;
+    
+    line-height: 6rem;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+    text-shadow: 2px 2px 2px grey;
+    
+}
+
+blockquote{
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    font-family:'Love Ya Like A Sister', cursive;
+    background-color: navy;
+    margin-top: 0px;
+    padding-bottom: 30px;
+    
+
+}

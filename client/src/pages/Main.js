@@ -2,17 +2,29 @@ import React,{useState,useEffect} from "react";
 import HeaderBlock from "../components/containers/HeaderBlock"
 import TagList from "../components/containers/TagList"
 import AllObjects from "../components/containers/AllObjects"
+import AdCarousel from "../components/containers/AdCarousel"
+import VideoCarousel from "../components/containers/VideoCarousel"
 import {Col,Row,Container,Image} from "react-bootstrap"
 import "./style.css"
 
 //import "../utils/API"
 import API from "../utils/API"
-//import { set } from "lodash";
+import lodash from "lodash";
 
 export default function Main ({whichSection}) {
 
     const [pageObjects,setPageObjects]=useState([]);
+    const [pageSuppliers,setPageSuppliers]=useState([]);
+    const [pageVideos,setPageVideos]=useState([]);
+    
     const [allPageObjects,setAllPageObjects]=useState([]);
+    const [allPageSuppliers,setAllPageSuppliers]=useState([]);
+    const [allPageVideos,setAllPageVideos]=useState([]);
+
+    const [allObjects,setAllObjects]=useState([]);
+    
+
+    
     const [tags,setTags]=useState([]);
     const [types,setTypes]=useState([]);
    
@@ -40,6 +52,7 @@ export default function Main ({whichSection}) {
             });
             return (tagsObj);
         };
+        
     
         function getAllTypes(newObjects=[]){
             if(newObjects === undefined || newObjects.length === 0 ) return;
@@ -60,17 +73,47 @@ export default function Main ({whichSection}) {
             return (typesObj);
         };
         
+        //Main function starts here
+        //Don't do this if we already have called the API and have data - stops repeat calls 
         if(newObjects ===[] ) return;
+        
+        //Get page data from Mongo via api calls
         API.getAllTopicData(whichSection)
             .then(apiresults=>{
-                setPageObjects(apiresults.data);
-                setAllPageObjects(apiresults.data);
+                console.log(apiresults);
+                
+                const supplierTypes=['approved supplier','web store','suggested supplier','commercial supplier','advertisement'];
+                const videoTypes = ['youtube video']
+                const specialTypes=supplierTypes.concat(videoTypes);
+                let alldata=apiresults.data;
+                setAllObjects(alldata);
+
                 //console.log("got initial data",allPageObjects);
                 
-                console.log("data:", apiresults.data);
-                alltaglist=getAllTags(apiresults.data);
+                //filter out suppliers
+                let allinfodata=lodash.filter(alldata,((value,index,collection)=>{
+                     return(!specialTypes.includes(value.type.toLowerCase()))   
+                }));
+
                 
-                const newtypes=getAllTypes(apiresults.data);
+                let allads=lodash.filter(alldata,((value,index,collection)=>{
+                    return(supplierTypes.includes(value.type.toLowerCase()))   
+                }));
+
+                let videos=lodash.filter(alldata,((value,index,collection)=>{
+                    return(videoTypes.includes(value.type.toLowerCase()))   
+                }));
+
+                setPageObjects(allinfodata);
+                setAllPageObjects(allinfodata)
+                setPageSuppliers(allads);
+                setAllPageSuppliers(allads);
+                setPageVideos(videos);
+                setAllPageVideos(videos);
+                
+                alltaglist=getAllTags(allinfodata);
+                
+                const newtypes=getAllTypes(alldata);
                 //console.log("newtypes",newtypes)
                 setTypes(newtypes);
                 return alltaglist;
@@ -115,6 +158,44 @@ export default function Main ({whichSection}) {
         });
         //console.log(data);
         setPageObjects(data);
+        
+        data=[...allPageSuppliers];    
+        data=data.filter((record)=>{
+            //console.log("filtering data",tags)
+            let includeRecord=false;
+
+            //look for matches between checked tags and elements of tag array in dataset
+            tags.forEach(tag=>{
+                if(tag.isChecked){
+                    if(record.tags.includes(tag.tagName)){
+                        //console.log("found a match: ", tag.tagName, record.headingText )
+                        includeRecord= true;
+                    }
+                }
+            })
+            return (includeRecord);
+        });
+        //console.log(data);
+        setPageSuppliers(data);
+
+        data=[...allPageVideos];    
+        data=data.filter((record)=>{
+            //console.log("filtering data",tags)
+            let includeRecord=false;
+
+            //look for matches between checked tags and elements of tag array in dataset
+            tags.forEach(tag=>{
+                if(tag.isChecked){
+                    if(record.tags.includes(tag.tagName)){
+                        //console.log("found a match: ", tag.tagName, record.headingText )
+                        includeRecord= true;
+                    }
+                }
+            })
+            return (includeRecord);
+        });
+        //console.log(data);
+        setPageVideos(data);
     };
 
     //Filters all page objects by the selection in the "filter by Tag" dropdown box
@@ -137,6 +218,43 @@ export default function Main ({whichSection}) {
         });
         //console.log(data);
         setPageObjects(data);
+        
+        data=[...allPageSuppliers];    
+        data=data.filter((record)=>{
+            //console.log("filtering data",types)
+            let includeRecord=false;
+
+            //look for matches between checked tags and elements of tag array in dataset
+            types.forEach(tag=>{
+                if(tag.isChecked){
+                    if(record.type===(tag.tagName)){
+                        //console.log("found a match: ", tag.tagName, record.headingText )
+                        includeRecord= true;
+                    }
+                }
+            })
+            return (includeRecord);
+        });
+        //console.log(data);
+        setPageSuppliers(data);
+        data=[...allPageVideos];    
+        data=data.filter((record)=>{
+            //console.log("filtering data",types)
+            let includeRecord=false;
+
+            //look for matches between checked tags and elements of tag array in dataset
+            types.forEach(tag=>{
+                if(tag.isChecked){
+                    if(record.type===(tag.tagName)){
+                        //console.log("found a match: ", tag.tagName, record.headingText )
+                        includeRecord= true;
+                    }
+                }
+            })
+            return (includeRecord);
+        });
+        //console.log(data);
+        setPageVideos(data);
     }
     
     // code that executes when a checkbox in the 'filter by topic' dropdown list is changed
@@ -299,17 +417,27 @@ export default function Main ({whichSection}) {
                                     />  
                             
                         </Col>}
-                    {pageObjects!== undefined && 
-                        <Col md={{ span: 10, offset: 0 }} > 
-                            
-                                <AllObjects 
-                                    data={pageObjects}
-                                    onThumbsUpClick={onThumbsUpClick}
-                                    onThumbsDownClick={onThumbsDownClick}   
-                                /> 
-                            
+                        <Col>
+                            <Row>
+                                {pageSuppliers!==undefined && <Col md={{ span: 6, offset: 0 }}><AdCarousel data={pageSuppliers}/></Col>}
+                                {pageVideos!==undefined && <Col md={{ span: 6, offset: 0 }}><VideoCarousel data={pageVideos}/></Col> }
+                            </Row>
+                        
+                            {pageObjects!== undefined && 
+                            <Row>
+                                <Col md={{ span: 12, offset: 0 }} > 
+                                    
+                                        <AllObjects 
+                                            data={pageObjects}
+                                            onThumbsUpClick={onThumbsUpClick}
+                                            onThumbsDownClick={onThumbsDownClick}   
+                                        /> 
+                                    
+                                </Col>
+                            </Row> }
+                        
                         </Col>
-                    }
+                    
                 </Row>
                 
             </Container>

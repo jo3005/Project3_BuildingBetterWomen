@@ -36,9 +36,23 @@ export default  {
         console.log(mytopic);
         return axios.get('/api',{
             params:{
-                type:mytopic
+                topic:mytopic,
+                type:['Approved Supplier','Web Store','Suggested Supplier']
+                
             }
         })
+    },
+    getAllSupplierTopicData: function(topic){
+      console.log("getting data for topic:", topic);
+      let mytopic=whichTopic(topic);
+      console.log(mytopic);
+      return axios.get('/api/suppliers',{
+          params:{
+              type:mytopic,
+              type:['Approved Supplier','Web Store','Suggested Supplier']
+
+          }
+      })
     },
     getOneTopicData: function(whichId){
         //console.log("getting data for topic:", whichId);

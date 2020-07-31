@@ -344,7 +344,37 @@ const Contents = [{
         tags:["Resume Advice"],
         include:true
       }
+      ,
+      
     
+      {
+        topic:"money",
+        type: "Youtube Video",
+        headingText: "Invest like a Girl - Why Women Investors are Killing it in the Stock Market",
+        logoUrl:"https://www.youtube.com/",
+        author: "Tracey Edwards",
+        subtitle:"",
+        contentText: "Wowed your dream employer with a great resume and scored yourself an interview? It’s time to knock their socks off in person and make a great first impression! Preparation is the key to nailing it and securing the role, so now’s the time to do your research, think about any tricky questions you might encounter, and put together your very best hire-me interview outfit.",
+        url: "https://www.youtube.com/watch?v=SN18PUqRTx4",
+        links:[''],
+        graphics:"",
+        tags:["Investing"],
+        include:true
+      },
+      {
+        topic:"money",
+        type: "Youtube Video",
+        headingText: "Women and Money: How to start an investment portfolio",
+        logoUrl:"https://www.youtube.com/",
+        author: "Moneywise",
+        subtitle:"",
+        contentText: "Wowed your dream employer with a great resume and scored yourself an interview? It’s time to knock their socks off in person and make a great first impression! Preparation is the key to nailing it and securing the role, so now’s the time to do your research, think about any tricky questions you might encounter, and put together your very best hire-me interview outfit.",
+        url: "https://www.youtube.com/watch?v=Iffeeb8ODUg",
+        links:[''],
+        graphics:"",
+        tags:["Investing"],
+        include:true
+      }
 
 
 

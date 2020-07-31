@@ -3,8 +3,11 @@ const em= require("../../controllers/emailController");
 
 module.exports = function(app) {
 
-  // Get all data for a particular topic that isn't marked as hidden
+  // Get all data for a particular topic that isn't marked as hidden and is not a supplier
     app.get("/api", ctr.findAllTopicData);
+
+    // Get all data for a particular topic that isn't marked as hidden
+    app.get("/api/suppliers", ctr.findAllSupplierTopicData);
      
     //show hidden content
     app.get("/api/unhide", ctr.showHiddenData);   

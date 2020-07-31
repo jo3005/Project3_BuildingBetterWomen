@@ -11,7 +11,6 @@ import {
 import NavbarHdg from "./components/containers/NavbarHdg/index.js";
 import Footer from "./components/containers/Footer";
 
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import {Container} from "react-bootstrap"
 
@@ -21,7 +20,6 @@ import Landing from  "./pages/Landing.js"
 import Login from  "./pages/Login.js"
 import Register from  "./pages/Register.js"
 
-import "./App.css";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import {faThumbsUp,faThumbsDown} from '@fortawesome/free-solid-svg-icons';
@@ -38,9 +36,9 @@ function App(props) {
   
   return (
     <Router>
-      <div  >
+      <div  className="body_container" >
       {whichPage !== "landing" && whichPage !== "home" && whichPage !== "" && <NavbarHdg activePage={whichPage}/>}
-        <Container fluid>
+        <Container fluid className="noMarginsOrPadding">
             
             <Switch>
               <Route path="/landing"><Landing /></Route>

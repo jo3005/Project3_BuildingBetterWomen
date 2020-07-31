@@ -14,16 +14,16 @@ export default function ItemObject (props){
                 <Card.Header className="noTopMargin" fluid="true">
                     <Accordion.Toggle as={Button} variant="link" eventKey={data._id}>
                         <Row className="noTopMargin flex">
-                            <Col md="3" className="justify-content-left"  >
+                            <Col md="3" className="text-left">
                                 
                                 <Card.Text className="itemType">{data.type.toUpperCase()}</Card.Text>  
                                     
                             </Col>
-                            <Col md="3"  className="" > 
+                            <Col md="2"  className="" > 
                                 {data.logoUrl.length>0 && <Card.Img src={data.logoUrl} className="itemLogo"/>}
                                 
                             </Col>
-                            <Col md="6"  className="maininfo" > 
+                            <Col md="7"  className="maininfo" > 
                                 {data.headingText.length>0 && <Card.Title className="itemTitle">{data.headingText}</Card.Title>}
                                 {data.subtitle.length>0    && <Card.Subtitle className="itemSubtitle">{data.subtitle}</Card.Subtitle>}
                                 {data.url.length>0         && <Card.Link className= "itemUrl" href={data.url} target="_blank">{data.url}</Card.Link>}
@@ -42,18 +42,7 @@ export default function ItemObject (props){
                                 </Col>
                             </Row>
                             <Row>
-                                <Col className="bodyContents">
-                                    {data.tags.length> 0  && <Card.Text className="tagPrefix" >Providing expertise in: </Card.Text>}
-                                    {data.tags.length> 0  && 
-                                        <ListGroup as="ol" className="taglistgroup" >    
-                                            {data.tags.map((tag,index) =>  {
-                                            return (<ListGroup.Item key={index} className= "itemTag">
-                                                        <Card.Text className= "itemTag">{tag}</Card.Text>     
-                                                    </ListGroup.Item>)}
-                                            )}
-                                        </ListGroup>
-                                    } 
-                                </Col>
+                                
                                 <Col className="bodyContents">
                                     {data.links.length > 0     &&
                                             (<ListGroup as="ol" variant="flush">

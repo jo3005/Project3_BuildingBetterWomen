@@ -7,7 +7,7 @@ export default function AttributeCheckBox(props){
     //console.log(props.handleChange)
     return (
         <>
-            <Form>
+            <Form className="tagListings">
               <Form.Check key={props.tagName} 
                         label={props.tagName} 
                         className="tagCheckBox" 

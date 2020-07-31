@@ -11,21 +11,21 @@ export default function Loading() {
 
   return (
       <>
-      <Container className="landingPage" fluid="true" >
+      <Container className="landingPage" fluid >
         
           <Jumbotron fluid className="landingjumbo">
             <h1>Building Better Women</h1>
             <blockquote>Empowering women by helping them build their skillset. </blockquote>
-            <p><LoginSignup /> </p>
+            
           </Jumbotron>
-        
-          <LoadingTopics />
-        
-        
-        
-        
+          <Row>
+            <Col md="4"></Col>
+            <Col md="4" className="text-center"><LoadingTopics /></Col>
+            <Col md="4"></Col>
+          </Row>
         
           
+        
         </Container>
         
     </>

@@ -4,11 +4,6 @@
     padding-top: 10px;
     
 }
-.headerLogo{}
-
-.likedislikebtns{
-    
-}
 
 .noTopMargin{
     margin-top:0px;
@@ -108,14 +103,12 @@ p.tagPrefix{
     margin-left: 3px;
     
 }
-.card{
+.contentCards.card{
     padding: 0px;
     margin: 0px;
     margin-bottom: 5px;
-    border-top:1pt rgb(160, 2, 160) solid;
-    border-bottom:1pt rgb(160, 2, 160) solid;
     border-radius: 0;
-    box-shadow: 10px 20px 30px rgb(160,180,200);
+    
 }
 .card-img{
     justify-self: left;
@@ -125,15 +118,14 @@ p.tagPrefix{
     margin-left: 0rem;
 }
 .btnLDrow{
-    border-top:1pt rgb(160, 2, 160) solid;
-    border-bottom:1pt rgb(160, 2, 160) solid;
+    
 }
 .contentCards.card >div.noTopMargin.card-header {
     border-radius: 0px;
-    border-bottom: 1pt rgb(160, 2, 160) solid;
+    
 
 }
 .contentCardsBody{
-    border-top: 1pt rgb(160, 2, 160) solid;
+    
 }
 
