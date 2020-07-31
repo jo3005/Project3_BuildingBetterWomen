@@ -12,6 +12,31 @@
     padding:0! important;
 
 }
-/* 
 
- */
+#openModalBtn{
+    font-family: 'Love Ya Like A Sister', cursive;
+    color: rgb(160, 2, 160);
+    background-color:white;
+    border-color:white;
+    /*position: fixed;
+     right: 0;
+    margin-right: 45px; */
+}
+
+#openModalBtn:hover,
+#openModalBtn:active,
+#openModalBtn:focus {
+    color: rgb(160, 2, 160);
+    background-color:white;
+    border-color:white;
+    text-shadow: 0 0 10px pink;
+}
+
+#searchbox{
+    position:relative;
+    
+}
+#searchbox:focus{
+    box-shadow: 0 0 5px pink;
+    border-color:rgb(160, 2, 160);
+}

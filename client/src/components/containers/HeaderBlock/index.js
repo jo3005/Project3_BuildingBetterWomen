@@ -1,6 +1,6 @@
 import React,{useState,setState} from "react";
 
-import {Col,Button} from "react-bootstrap"
+import {Col,Button,Form} from "react-bootstrap"
 import SubmitIdeaForm from "../SubmitIdeaForm"
 import "./style.css"
  
@@ -32,11 +32,20 @@ export default function HeaderBlock (props){
 
     return (
         <>
-            <Col md="11">
+            <Col md="8">
                 <h1 className="hdngtext"> {hdrtext} </h1>
             </Col>
-            <Col md="1"  >
-                <Button variant="primary" onClick={() => setModalShow(true)}>
+            <Col md="2">
+                <Form inline className="searchForm" >
+                    <Form.Control type="text" placeholder="Search..."  id="searchbox"/>
+                </Form>
+            </Col>
+            <Col md="2"  className="justify-contents-right">
+                <Button 
+                    id="openModalBtn"
+                    variant="primary" 
+                    onClick={() => setModalShow(true)}
+                    >
                     Suggest Content
                 </Button>
                 <SubmitIdeaForm 
