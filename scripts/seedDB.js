@@ -355,7 +355,7 @@ const Contents = [{
         author: "Tracey Edwards",
         subtitle:"",
         contentText: "Wowed your dream employer with a great resume and scored yourself an interview? It’s time to knock their socks off in person and make a great first impression! Preparation is the key to nailing it and securing the role, so now’s the time to do your research, think about any tricky questions you might encounter, and put together your very best hire-me interview outfit.",
-        url: "https://www.youtube.com/watch?v=SN18PUqRTx4",
+        url: "https://www.youtube.com/embed/SN18PUqRTx4",
         links:[''],
         graphics:"",
         tags:["Investing"],
@@ -369,15 +369,96 @@ const Contents = [{
         author: "Moneywise",
         subtitle:"",
         contentText: "Wowed your dream employer with a great resume and scored yourself an interview? It’s time to knock their socks off in person and make a great first impression! Preparation is the key to nailing it and securing the role, so now’s the time to do your research, think about any tricky questions you might encounter, and put together your very best hire-me interview outfit.",
-        url: "https://www.youtube.com/watch?v=Iffeeb8ODUg",
+        url: "https://www.youtube.com/embed/Iffeeb8ODUg",
         links:[''],
         graphics:"",
         tags:["Investing"],
         include:true
+      },
+      {
+        topic:"jobs",
+        type: "Government Website",
+        headingText: "Funding for female founded startups to launch and scale their businesses into domestic and global markets",
+        logoUrl:"",
+        author: "Business.gov.au",
+        subtitle:"",
+        contentText: "The Boosting Female Founders Initiative (the program) will run over three years from 2020-21 to 2022-23. The program is part of the Women's Economic Security Package, which helps to support more Australian women into work and supports Australia's international obligations under the Convention on the Elimination of all forms of Discrimination against Women (CEDAW). The program will provide targeted support on a co-contribution basis to female founders of startup businesses (startups) to launch and scale their businesses into domestic and global markets.",
+        url: "https://www.business.gov.au/Grants-and-Programs/Boosting-Female-Founders",
+        links:[''],
+        graphics:"",
+        tags:["Enterpreneurship"],
+        include:true
+      },
+      {
+        topic:"jobs",
+        type: "Online Website",
+        headingText: "Women's Agenda",
+        logoUrl:"https://womensagenda.com.au/wp-content/uploads/2017/01/wa-logo.png",
+        author: "Women's Agenda",
+        subtitle:"",
+        contentText: "We’re a hub sharing the latest news and views affecting how women live and work. Every day our small team of journalists and editors look at politics, business, leadership, tech and life from the perspective of professional women and female entrepreneurs. We offer a neat summary of everything you need to know in our daily email update, sent just before lunchtime. We’re small (and therefore nimble), independent and 100% female owned and run.",
+        url: "https://womensagenda.com.au/leadership/profiles/inspiring-women-lisa-messenger-author-entrepreneur-challenger/",
+        links:[''],
+        graphics:"",
+        tags:["Enterpreneurship"],
+        include:true
+      },
+      {
+        topic:"jobs",
+        type: "Online Supplier",
+        headingText: "Behind the Brands",
+        logoUrl:"https://www.behindthebrands.com.au/wp-content/uploads/2017/12/weblogoblackcopy.png",
+        author: "Women's Agenda",
+        subtitle:"A Platform for Female Enterpreneurs",
+        contentText: "Let's clear something up. Behind the Brands isn't a networking group. It's game changing platform for serious female entrepreneurs in Australia who want to make an impact. The purpose is to assist ambitious women like you and me, to get access to the education, support and tools to build a successful and profitable business, based on our individual definition of success.",
+        url: "https://www.behindthebrands.com.au/",
+        links:[''],
+        graphics:"",
+        tags:["Enterpreneurship","Networking"],
+        include:true
+      },
+      {
+        topic:"jobs",
+        type: "Government Website",
+        headingText: "Expert Find Her",
+        logoUrl:"https://expertfindher.global/static/img/expert-intro-icon.png",
+        author: "CSIRO",
+        subtitle:"Designed to boost gender equality, Expert FindHer features women from all fields of research.",
+        contentText: "Powered by CSIRO, IC Global is here to help you innovate. Funded under NISA, the platform aims to boost industry-researcher collaboration. We facilitate access to both the know-how, and the know who.",
+        url: "https://expertfindher.global/",
+        links:[''],
+        graphics:"",
+        tags:["Networking"],
+        include:true
+      },
+      {
+        topic:"handywoman",
+        type: "Commercial Blogpost",
+        headingText: "Training Videos on Handygirl Australia",
+        logoUrl:"https://www.handygirlaustralia.com.au/wp-content/uploads/2020/05/HandyGirl-Logo.png",
+        author: "Handygirl Australia",
+        subtitle:"We love learning new things and being challenged.",
+        contentText: "At Handy Girl we love helping and learning.  So we have created some small videos that we use as staff and thought that for the Do-It-Yourselfer at home, you might just find something here to help or inspire you along the way.",
+        url: "https://www.handygirlaustralia.com.au/training-videos/",
+        links:[''],
+        graphics:"",
+        tags:["Property Maintenance", "Gardening Services", "House Cleaning","Biohazard Decontamination","Training"],
+        include:true
+      },
+      {
+        topic:"handywoman",
+        type: "Commercial Supplier",
+        headingText: "Training Videos on Handygirl Australia",
+        logoUrl:"https://www.handygirlaustralia.com.au/wp-content/uploads/2020/05/HandyGirl-Logo.png",
+        author: "Handygirl Australia",
+        subtitle:"We love learning new things and being challenged.",
+        contentText: "Handy Girl Australia was established and registered in 2007, after Founder Kim Halbert-Pere found herself living in rural Victoria, renovating her own home and loving the challenge of a DIY project. Realising she wasn’t the only female with a passion for repairs, Kim took a chance and launched Handy Girl Australia. This unique service was created with two visions in mind: firstly to give home and business owners access to reliable cleaning and maintenance, and secondly to create an empowering employment platform for women who are motivated, talented and looking for flexible work.",
+        url: "https://www.handygirlaustralia.com.au/",
+        links:[''],
+        graphics:"",
+        tags:["Property Maintenance", "Gardening Services", "House Cleaning","Biohazard Decontamination","Training"],
+        include:true
       }
-
-
-
 ];
 
 db.Content
